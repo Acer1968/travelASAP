@@ -1,0 +1,17 @@
+﻿# Ignorovat složky
+.venv-facebook/
+.vscode/
+.idea/
+__pycache__/
+bludiste.py
+myconfig.py
+
+# Ignorovat specifické soubory
+*.pyc
+*.log
+
+# Neignorovat specifické soubory
+!.gitignore
+!gui-complete-scrap.py
+!functions.py
+
