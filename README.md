@@ -1,2 +1,2 @@
 # travelASAP
-Skripty, které usnadňují práci pro travelASAP, zejména spolupráci s Facebookem, načítání/scrapování vlastních stránek a podobně.
+Kompletní sada skriptů pro automatizaci práce s webovými stránkami a API www.travelasap.cz, načítání a scrapování ze stránek, vytváření informací o zájezdech a hotelech, vytváření příspěvků na sociální sítě a podobně.
