@@ -86,7 +86,7 @@ url_entry.insert(0, SAMPLE_PAGE)  # Nastavení počáteční hodnoty URL
 url_entry.grid(row=1, column=0, columnspan=2)
 
 # Checkbox pro URL s parametry
-via_param = tk.BooleanVar(value=True)
+via_param = tk.BooleanVar(value=False)
 url_param_checkbox = tk.Checkbutton(frame_input, text="URL s parametry", variable=via_param)
 url_param_checkbox.grid(row=2, column=0, columnspan=2)
 
@@ -123,14 +123,19 @@ for i in range(4):
 
 # Vytvoření kalendářových widgetů pro výběr data odletu a návratu
 today = datetime.now()
+
+# Výpočet data odletu a návratu
+departure_date = today + timedelta(days=7)
+return_date = today + timedelta(days=30)
+
 departure_date_label = tk.Label(frame_input, text="Odlet nejdříve:")
 departure_date_label.grid(row=10, column=0)
-departure_date_entry = DateEntry(frame_input, width=12, year=today.year, month=today.month, day=today.day+7, date_pattern='dd.mm.yyyy', background='darkblue', foreground='white', borderwidth=2, locale='cs_CZ')
+departure_date_entry = DateEntry(frame_input, width=12, year=departure_date.year, month=departure_date.month, day=departure_date.day, date_pattern='dd.mm.yyyy', background='darkblue', foreground='white', borderwidth=2, locale='cs_CZ')
 departure_date_entry.grid(row=10, column=1)
 
 return_date_label = tk.Label(frame_input, text="Návrat nejpozději:")
 return_date_label.grid(row=11, column=0)
-return_date_entry = DateEntry(frame_input, width=12, year=today.year, month=today.month, day=today.day+30, date_pattern='dd.mm.yyyy', background='darkblue', foreground='white', borderwidth=2, locale='cs_CZ')
+return_date_entry = DateEntry(frame_input, width=12, year=return_date.year, month=return_date.month, day=return_date.day, date_pattern='dd.mm.yyyy', background='darkblue', foreground='white', borderwidth=2, locale='cs_CZ')
 return_date_entry.grid(row=11, column=1)
 
 # Vytvoření labelu pro zobrazení stavu

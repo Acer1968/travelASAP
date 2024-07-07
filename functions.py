@@ -13,9 +13,17 @@ logging.basicConfig(level=logging.DEBUG)
 tour_operator_texts = {}
 
 def open_page(url, adults, children, children_ages, status_label, notebook, via_param):
+    driver = None
     try:
-        driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
-        driver.get(url)
+        # Pokus o použití lokálního WebDriveru
+        try:
+            driver = webdriver.Chrome(service=Service(r"d:\PetrVavrinec\PythonProjects\webdrivers\chromedriver.exe"))
+            driver.get(url)
+        except Exception as local_error:
+            print(f"Chyba s lokálním WebDriverem: {local_error}")
+            # Pokud selže, pokusí se stáhnout nejnovější verzi z webu
+            driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
+            driver.get(url)
 
         # Pauza pro načtení stránky
         time.sleep(5)
