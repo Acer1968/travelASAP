@@ -1,0 +1,2691 @@
+<table class="table">
+    <thead>
+        <tr>
+           <th class="wp5"><a href="/admin/LocalAccommodationRatings/index/page:1/sort:id/direction:asc">ID&nbsp;<span style="color: Silver" class="glyphicon glyphicon-sort"></span></a></th>
+           <th class="wp15"><a href="/admin/LocalAccommodationRatings/index/page:1/sort:name/direction:asc">Název&nbsp;<span style="color: Silver" class="glyphicon glyphicon-sort"></span></a></th>
+           <th class="wp30">
+               Země a destinace			   </th>
+           <th class="wp10"><a href="/admin/LocalAccommodationRatings/index/page:1/sort:accommodation_type_id/direction:asc">Typ ubytování&nbsp;<span style="color: Silver" class="glyphicon glyphicon-sort"></span></a></th>
+           <th class="wp5"><a href="/admin/LocalAccommodationRatings/index/page:1/sort:rating/direction:asc">Kategorie hotelu&nbsp;<span style="color: Silver" class="glyphicon glyphicon-sort"></span></a></th>
+           <th class="wp5">Doporučení</th>
+           <th class="wp5">Vlastní hodnocení</th>
+           <th class="wp5">Vlastní texty</th>
+           <th class="wp10 actions">Akce</th>
+       </tr>
+       <tr>
+           <th><div class="form-group "><input name="data[AccommodationMaster][id]" type="text" class="form-control size-small " value="" id="AccommodationMasterId"></div></th>
+           <th><div class="form-group "><input name="data[AccommodationMaster][name]" type="text" class="form-control size-small " maxlength="255" value="" id="AccommodationMasterName"></div></th>
+           <th>
+               <div class="wp50 form-group "><select name="data[AccommodationMaster][country_id]" class="form-control size-small" id="AccommodationMasterCountryId">
+<option value="">Stát</option>
+<option value="3">Albánie</option>
+<option value="4">Alžírsko</option>
+<option value="7">Andorra</option>
+<option value="10">Antarktida</option>
+<option value="11">Antigua a Barbuda</option>
+<option value="12">Argentina</option>
+<option value="13">Arménie</option>
+<option value="14">Aruba</option>
+<option value="15">Austrálie</option>
+<option value="16">Ázerbájdžán</option>
+<option value="17">Bahamy</option>
+<option value="18">Bahrajn</option>
+<option value="19">Bangladéš</option>
+<option value="20">Barbados</option>
+<option value="21">Belgie</option>
+<option value="22">Belize</option>
+<option value="23">Bělorusko</option>
+<option value="24">Benin</option>
+<option value="26">Bhútán</option>
+<option value="27">Bolívie</option>
+<option value="249">Bonaire</option>
+<option value="28">Bosna a Hercegovina</option>
+<option value="29">Botswana</option>
+<option value="31">Brazílie</option>
+<option value="33">Britské Panenské ostrovy</option>
+<option value="34">Brunej</option>
+<option value="35">Bulharsko</option>
+<option value="36">Burkina Faso</option>
+<option value="37">Burundi</option>
+<option value="38">Cookovy ostrovy</option>
+<option value="250">Curacao</option>
+<option value="40">Černá Hora</option>
+<option value="41">Česká republika</option>
+<option value="42">Čína</option>
+<option value="43">Dánsko</option>
+<option value="45">Dominika</option>
+<option value="46">Dominikánská republika</option>
+<option value="48">Egypt</option>
+<option value="49">Ekvádor</option>
+<option value="51">Estonsko</option>
+<option value="52">Etiopie</option>
+<option value="53">Faerské ostrovy</option>
+<option value="55">Fidži</option>
+<option value="56">Filipíny</option>
+<option value="57">Finsko</option>
+<option value="58">Francie</option>
+<option value="59">Francouzská Guyana</option>
+<option value="61">Francouzská Polynésie</option>
+<option value="63">Gambie</option>
+<option value="64">Ghana</option>
+<option value="66">Grenada</option>
+<option value="67">Grónsko</option>
+<option value="68">Gruzie</option>
+<option value="69">Guadeloupe</option>
+<option value="71">Guatemala</option>
+<option value="75">Guyana</option>
+<option value="76">Haiti</option>
+<option value="78">Honduras</option>
+<option value="79">Hongkong</option>
+<option value="80">Chile</option>
+<option value="81">Chorvatsko</option>
+<option value="82">Indie</option>
+<option value="83">Indonésie</option>
+<option value="85">Írán</option>
+<option value="86">Irsko</option>
+<option value="87">Island</option>
+<option value="88">Itálie</option>
+<option value="89">Izrael</option>
+<option value="90">Jamajka</option>
+<option value="91">Japonsko</option>
+<option value="92">Jemen</option>
+<option value="94">Jihoafrická republika</option>
+<option value="96">Jižní Korea</option>
+<option value="97">Jordánsko</option>
+<option value="98">Kajmanské ostrovy</option>
+<option value="99">Kambodža</option>
+<option value="100">Kamerun</option>
+<option value="101">Kanada</option>
+<option value="102">Kapverdy</option>
+<option value="103">Katar</option>
+<option value="104">Kazachstán</option>
+<option value="105">Keňa</option>
+<option value="108">Kolumbie</option>
+<option value="109">Komory</option>
+<option value="110">Kongo</option>
+<option value="111">Kostarika</option>
+<option value="112">Kuba</option>
+<option value="114">Kypr</option>
+<option value="115">Kyrgyzstán</option>
+<option value="116">Laos</option>
+<option value="117">Lesotho</option>
+<option value="118">Libanon</option>
+<option value="120">Libye</option>
+<option value="121">Lichtenštejnsko</option>
+<option value="122">Litva</option>
+<option value="123">Lotyšsko</option>
+<option value="124">Lucembursko</option>
+<option value="125">Macao</option>
+<option value="126">Madagaskar</option>
+<option value="127">Maďarsko</option>
+<option value="129">Malajsie</option>
+<option value="130">Malawi</option>
+<option value="131">Maledivy</option>
+<option value="132">Mali</option>
+<option value="133">Malta</option>
+<option value="135">Maroko</option>
+<option value="136">Marshallovy ostrovy</option>
+<option value="137">Martinik</option>
+<option value="138">Mauricius</option>
+<option value="139">Mauritánie</option>
+<option value="140">Mayotte</option>
+<option value="142">Mexiko</option>
+<option value="143">Mikronésie</option>
+<option value="144">Moldavsko</option>
+<option value="145">Monako</option>
+<option value="146">Mongolsko</option>
+<option value="248">Moře - plavby</option>
+<option value="148">Mosambik</option>
+<option value="149">Myanmar</option>
+<option value="150">Namibie</option>
+<option value="152">Německo</option>
+<option value="153">Nepál</option>
+<option value="154">Niger</option>
+<option value="155">Nigérie</option>
+<option value="156">Nikaragua</option>
+<option value="158">Nizozemské Antily</option>
+<option value="159">Nizozemsko</option>
+<option value="161">Norsko</option>
+<option value="162">Nová Kaledonie</option>
+<option value="163">Nový Zéland</option>
+<option value="164">Omán</option>
+<option value="165">Pákistán</option>
+<option value="166">Palau</option>
+<option value="167">Palestinská autonomie</option>
+<option value="168">Panama</option>
+<option value="169">Papua Nová Guinea</option>
+<option value="170">Paraguay</option>
+<option value="171">Peru</option>
+<option value="174">Polsko</option>
+<option value="175">Portoriko</option>
+<option value="176">Portugalsko</option>
+<option value="177">Rakousko</option>
+<option value="178">Réunion</option>
+<option value="180">Rumunsko</option>
+<option value="181">Rusko</option>
+<option value="182">Rwanda</option>
+<option value="183">Řecko</option>
+<option value="253">Říční plavby</option>
+<option value="185">Salvador</option>
+<option value="186">Samoa</option>
+<option value="187">San Marino</option>
+<option value="188">Saúdská Arábie</option>
+<option value="189">Senegal</option>
+<option value="190">Severní Korea</option>
+<option value="128">Severní Makedonie</option>
+<option value="192">Seychely</option>
+<option value="193">Sierra Leone</option>
+<option value="194">Singapur</option>
+<option value="195">Slovensko</option>
+<option value="196">Slovinsko</option>
+<option value="198">Spojené arabské emiráty</option>
+<option value="200">Spojené státy americké</option>
+<option value="201">Srbsko</option>
+<option value="215">Srí Lanka</option>
+<option value="202">Středoafrická republika</option>
+<option value="203">Súdán</option>
+<option value="204">Surinam</option>
+<option value="207">Svatá Lucie</option>
+<option value="252">Svatý Bartoloměj</option>
+<option value="251">Svatý Martin</option>
+<option value="210">Svatý Vincenc a Grenadiny</option>
+<option value="211">Svazijsko</option>
+<option value="212">Sýrie</option>
+<option value="213">Šalamounovy ostrovy</option>
+<option value="214">Španělsko</option>
+<option value="216">Švédsko</option>
+<option value="217">Švýcarsko</option>
+<option value="218">Tádžikistán</option>
+<option value="219">Tanzanie</option>
+<option value="220">Thajsko</option>
+<option value="221">Tchaj-wan</option>
+<option value="222">Togo</option>
+<option value="224">Tonga</option>
+<option value="225">Trinidad a Tobago</option>
+<option value="226">Tunisko</option>
+<option value="227">Turecko</option>
+<option value="228">Turkmenistán</option>
+<option value="229">Turks a Caicos</option>
+<option value="231">Uganda</option>
+<option value="232">Ukrajina</option>
+<option value="233">Uruguay</option>
+<option value="234">Uzbekistán</option>
+<option value="199">Velká Británie</option>
+<option value="238">Venezuela</option>
+<option value="239">Vietnam</option>
+<option value="243">Zambie</option>
+<option value="244">Zimbabwe</option>
+</select></div><div class="wp50 form-group "><select name="data[AccommodationMaster][destination_id]" class="form-control size-small" id="AccommodationMasterDestinationId">
+<option value="">Destinace</option>
+</select></div>			   </th>
+           <th><div class="form-group "><select name="data[AccommodationMaster][accommodation_type_id]" class="form-control size-small" id="AccommodationMasterAccommodationTypeId">
+<option value="0"></option>
+<option value="1">Hotel</option>
+<option value="2">Penzion</option>
+<option value="3">Loď</option>
+<option value="4">Vlastní</option>
+<option value="5">Apartmány</option>
+<option value="6">Bungalovy</option>
+<option value="7">Studia</option>
+<option value="8">Stan</option>
+<option value="9">Chata</option>
+<option value="10">Karavan</option>
+<option value="11">SPA</option>
+<option value="12">Vila</option>
+<option value="13">Program</option>
+<option value="14">Kemp</option>
+<option value="15">Rezidence</option>
+<option value="16">Mobilhome</option>
+<option value="17">Pokoje</option>
+<option value="18">Komplex</option>
+<option value="19">Dům</option>
+<option value="20">Ubytovna</option>
+<option value="21">Hostel</option>
+</select></div></th>
+           <th><div class="form-group "><select name="data[AccommodationMaster][rating]" class="form-control size-small" id="AccommodationMasterRating">
+<option value="0"></option>
+<option value="1">*</option>
+<option value="2">**</option>
+<option value="2.5">**+</option>
+<option value="3">***</option>
+<option value="3.5">***+</option>
+<option value="4">****</option>
+<option value="4.5">****+</option>
+<option value="5">*****</option>
+<option value="6">******</option>
+<option value="7">*******</option>
+</select></div></th>
+           <th><div class="form-group "><select name="data[AccommodationMaster][recommendation]" class="form-control size-small" id="AccommodationMasterRecommendation">
+<option value=""></option>
+<option value="0">Ne</option>
+<option value="1">Ano</option>
+</select></div></th>
+           <th>
+           <div class="form-group "><select name="data[AccommodationMaster][exists]" class="form-control size-small" id="AccommodationMasterExists">
+<option value=""></option>
+<option value="0">Ne</option>
+<option value="1">Ano</option>
+</select></div>			   </th>
+           <th>
+           <div class="form-group "><select name="data[AccommodationMaster][texts]" class="form-control size-small" id="AccommodationMasterTexts">
+<option value=""></option>
+<option value="0">Ne</option>
+<option value="1">Ano</option>
+</select></div>			   </th>
+           <th class="actions"><button class="filter-submit btn btn-default btn-secondary" type="submit" title="Filtrovat záznamy">Filtruj</button>&nbsp;<a href="/admin/LocalAccommodationRatings/clear_filter" class="filter-clear btn btn-icon btn-link-light" title="Vymazat filtr"><i class="material-icons">delete</i></a></th>
+       </tr>
+    </thead>
+
+    <tbody>
+                    <tr>
+            <td class="wp5">
+                6482				</td>
+            <td class="wp15">
+                                        <a href="https://i.ccdn.cz/acm/80/838636/l0.jpg" data-fancybox="AccommodationImage" class="colorbox" rel="colorbox-6482" title="Phi Phi Island Village Beach Resort &amp; Spa">
+                        <i class="material-icons">image</i>
+                    </a>
+                <a href="/admin/AccommodationMasters/view/6482">Phi Phi Island Village Beach Resort &amp; Spa</a>
+
+            </td>
+            <td class="wp30">
+                Thajsko » Phi Phi				</td>
+            <td class="wp10">
+                Hotel				</td>
+            <td class="wp10">
+                5.0				</td>
+            <td class="wp5">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="actions text-right w130">
+                <a class="btn btn-success btn-xs" href="/admin/LocalAccommodationRatings/edit/6482"><i class="material-icons">add_circle</i>&nbsp;Přidat</a>&nbsp;<div class="btn-group"><a role="button" class="btn btn-outline-secondary btn-xs dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a><ul class="dropdown-menu pull-right" role="menu"><li><a target="_blank" href="/Searchmasks/master/6482"><i class="material-icons">link</i>&nbsp;Odkaz na veřejný web</a></li></ul></div>&nbsp;				</td>
+        </tr>
+                    <tr>
+            <td class="wp5">
+                6493				</td>
+            <td class="wp15">
+                <a href="/admin/AccommodationMasters/view/6493">Patong Beach Hotel</a>
+
+            </td>
+            <td class="wp30">
+                Thajsko » Phuket				</td>
+            <td class="wp10">
+                Hotel				</td>
+            <td class="wp10">
+                4.0				</td>
+            <td class="wp5">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="actions text-right w130">
+                <a class="btn btn-success btn-xs" href="/admin/LocalAccommodationRatings/edit/6493"><i class="material-icons">add_circle</i>&nbsp;Přidat</a>&nbsp;<div class="btn-group"><a role="button" class="btn btn-outline-secondary btn-xs dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a><ul class="dropdown-menu pull-right" role="menu"><li><a target="_blank" href="/Searchmasks/master/6493"><i class="material-icons">link</i>&nbsp;Odkaz na veřejný web</a></li></ul></div>&nbsp;				</td>
+        </tr>
+                    <tr>
+            <td class="wp5">
+                6495				</td>
+            <td class="wp15">
+                                        <a href="https://i.ccdn.cz/acm/289/836387/l0.jpg" data-fancybox="AccommodationImage" class="colorbox" rel="colorbox-6495" title="Best Western Phuket Ocean Resort">
+                        <i class="material-icons">image</i>
+                    </a>
+                <a href="/admin/AccommodationMasters/view/6495">Best Western Phuket Ocean Resort</a>
+
+            </td>
+            <td class="wp30">
+                Thajsko » Phuket				</td>
+            <td class="wp10">
+                Hotel				</td>
+            <td class="wp10">
+                3.0				</td>
+            <td class="wp5">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="actions text-right w130">
+                <a class="btn btn-success btn-xs" href="/admin/LocalAccommodationRatings/edit/6495"><i class="material-icons">add_circle</i>&nbsp;Přidat</a>&nbsp;<div class="btn-group"><a role="button" class="btn btn-outline-secondary btn-xs dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a><ul class="dropdown-menu pull-right" role="menu"><li><a target="_blank" href="/Searchmasks/master/6495"><i class="material-icons">link</i>&nbsp;Odkaz na veřejný web</a></li></ul></div>&nbsp;				</td>
+        </tr>
+                    <tr>
+            <td class="wp5">
+                6496				</td>
+            <td class="wp15">
+                                        <a href="https://i.ccdn.cz/acm/484/857614/l0.jpg" data-fancybox="AccommodationImage" class="colorbox" rel="colorbox-6496" title="Katathani Beach Resort">
+                        <i class="material-icons">image</i>
+                    </a>
+                <a href="/admin/AccommodationMasters/view/6496">Katathani Beach Resort</a>
+
+            </td>
+            <td class="wp30">
+                Thajsko » Phuket				</td>
+            <td class="wp10">
+                Hotel				</td>
+            <td class="wp10">
+                5.0				</td>
+            <td class="wp5">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="actions text-right w130">
+                <a class="btn btn-success btn-xs" href="/admin/LocalAccommodationRatings/edit/6496"><i class="material-icons">add_circle</i>&nbsp;Přidat</a>&nbsp;<div class="btn-group"><a role="button" class="btn btn-outline-secondary btn-xs dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a><ul class="dropdown-menu pull-right" role="menu"><li><a target="_blank" href="/Searchmasks/master/6496"><i class="material-icons">link</i>&nbsp;Odkaz na veřejný web</a></li></ul></div>&nbsp;				</td>
+        </tr>
+                    <tr>
+            <td class="wp5">
+                6512				</td>
+            <td class="wp15">
+                                        <a href="https://i.ccdn.cz/acm/45/864144/l0.jpg" data-fancybox="AccommodationImage" class="colorbox" rel="colorbox-6512" title="Pavilion Samui Villas &amp; Resort">
+                        <i class="material-icons">image</i>
+                    </a>
+                <a href="/admin/AccommodationMasters/view/6512">Pavilion Samui Villas &amp; Resort</a><p>ex: Pavilion Samui Boutique Resort 
+
+            </p></td>
+            <td class="wp30">
+                Thajsko » Koh Samui				</td>
+            <td class="wp10">
+                Hotel				</td>
+            <td class="wp10">
+                4.5				</td>
+            <td class="wp5">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="actions text-right w130">
+                <a class="btn btn-success btn-xs" href="/admin/LocalAccommodationRatings/edit/6512"><i class="material-icons">add_circle</i>&nbsp;Přidat</a>&nbsp;<div class="btn-group"><a role="button" class="btn btn-outline-secondary btn-xs dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a><ul class="dropdown-menu pull-right" role="menu"><li><a target="_blank" href="/Searchmasks/master/6512"><i class="material-icons">link</i>&nbsp;Odkaz na veřejný web</a></li></ul></div>&nbsp;				</td>
+        </tr>
+                    <tr>
+            <td class="wp5">
+                6524				</td>
+            <td class="wp15">
+                                        <a href="https://i.ccdn.cz/acm/289/885344/l0.jpg" data-fancybox="AccommodationImage" class="colorbox" rel="colorbox-6524" title="Jomtien Palm Beach hotel &amp; resort  ">
+                        <i class="material-icons">image</i>
+                    </a>
+                <a href="/admin/AccommodationMasters/view/6524">Jomtien Palm Beach hotel &amp; resort  </a>
+
+            </td>
+            <td class="wp30">
+                Thajsko » Pattaya				</td>
+            <td class="wp10">
+                Hotel				</td>
+            <td class="wp10">
+                4.0				</td>
+            <td class="wp5">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="actions text-right w130">
+                <a class="btn btn-success btn-xs" href="/admin/LocalAccommodationRatings/edit/6524"><i class="material-icons">add_circle</i>&nbsp;Přidat</a>&nbsp;<div class="btn-group"><a role="button" class="btn btn-outline-secondary btn-xs dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a><ul class="dropdown-menu pull-right" role="menu"><li><a target="_blank" href="/Searchmasks/master/6524"><i class="material-icons">link</i>&nbsp;Odkaz na veřejný web</a></li></ul></div>&nbsp;				</td>
+        </tr>
+                    <tr>
+            <td class="wp5">
+                6533				</td>
+            <td class="wp15">
+                                        <a href="https://i.ccdn.cz/acm/289/447231/l0.jpg" data-fancybox="AccommodationImage" class="colorbox" rel="colorbox-6533" title="Holiday Villa Beach Resort">
+                        <i class="material-icons">image</i>
+                    </a>
+                <a href="/admin/AccommodationMasters/view/6533">Holiday Villa Beach Resort</a>
+
+            </td>
+            <td class="wp30">
+                Malajsie » ostrov Langkawi				</td>
+            <td class="wp10">
+                Hotel				</td>
+            <td class="wp10">
+                4.0				</td>
+            <td class="wp5">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="actions text-right w130">
+                <a class="btn btn-success btn-xs" href="/admin/LocalAccommodationRatings/edit/6533"><i class="material-icons">add_circle</i>&nbsp;Přidat</a>&nbsp;<div class="btn-group"><a role="button" class="btn btn-outline-secondary btn-xs dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a><ul class="dropdown-menu pull-right" role="menu"><li><a target="_blank" href="/Searchmasks/master/6533"><i class="material-icons">link</i>&nbsp;Odkaz na veřejný web</a></li></ul></div>&nbsp;				</td>
+        </tr>
+                    <tr>
+            <td class="wp5">
+                6536				</td>
+            <td class="wp15">
+                <a href="/admin/AccommodationMasters/view/6536">Beach Hotel Sharjah</a>
+
+            </td>
+            <td class="wp30">
+                Spojené arabské emiráty » Sharjah				</td>
+            <td class="wp10">
+                Hotel				</td>
+            <td class="wp10">
+                3.0				</td>
+            <td class="wp5">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="actions text-right w130">
+                <a class="btn btn-success btn-xs" href="/admin/LocalAccommodationRatings/edit/6536"><i class="material-icons">add_circle</i>&nbsp;Přidat</a>&nbsp;<div class="btn-group"><a role="button" class="btn btn-outline-secondary btn-xs dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a><ul class="dropdown-menu pull-right" role="menu"><li><a target="_blank" href="/Searchmasks/master/6536"><i class="material-icons">link</i>&nbsp;Odkaz na veřejný web</a></li></ul></div>&nbsp;				</td>
+        </tr>
+                    <tr>
+            <td class="wp5">
+                6537				</td>
+            <td class="wp15">
+                                        <a href="https://i.ccdn.cz/acm/502/882833/l0.jpg" data-fancybox="AccommodationImage" class="colorbox" rel="colorbox-6537" title="BM Beach">
+                        <i class="material-icons">image</i>
+                    </a>
+                <a href="/admin/AccommodationMasters/view/6537">BM Beach</a> <small>(léto)</small><p>ex: Bin Majid Beach
+
+            </p></td>
+            <td class="wp30">
+                Spojené arabské emiráty » Ras Al Khaimah				</td>
+            <td class="wp10">
+                Hotel				</td>
+            <td class="wp10">
+                4.0				</td>
+            <td class="wp5">
+                Ano				</td>
+            <td class="wp10">
+                Ano				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="actions text-right w130">
+                <a class="btn btn-secondary btn-xs" href="/admin/LocalAccommodationRatings/edit/6537"><i class="material-icons">edit</i>&nbsp;Změnit</a>&nbsp;<div class="btn-group"><a role="button" class="btn btn-outline-secondary btn-xs dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a><ul class="dropdown-menu pull-right" role="menu"><li><a href="/admin/LocalAccommodationRatings/view/61"><i class="material-icons">visibility</i>&nbsp;Detail</a></li><li><a target="_blank" href="/Searchmasks/master/6537"><i class="material-icons">link</i>&nbsp;Odkaz na veřejný web</a></li><li class="divider"></li><li><a href="/admin/LocalAccommodationRatings/delete/61"><i class="material-icons">delete</i>&nbsp;Smazat</a></li></ul></div>&nbsp;				</td>
+        </tr>
+                    <tr>
+            <td class="wp5">
+                6538				</td>
+            <td class="wp15">
+                                        <a href="https://i.ccdn.cz/acm/232/803372/l0.jpg" data-fancybox="AccommodationImage" class="colorbox" rel="colorbox-6538" title="Ajman Beach">
+                        <i class="material-icons">image</i>
+                    </a>
+                <a href="/admin/AccommodationMasters/view/6538">Ajman Beach</a>
+
+            </td>
+            <td class="wp30">
+                Spojené arabské emiráty » Ajman				</td>
+            <td class="wp10">
+                Hotel				</td>
+            <td class="wp10">
+                3.0				</td>
+            <td class="wp5">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="actions text-right w130">
+                <a class="btn btn-success btn-xs" href="/admin/LocalAccommodationRatings/edit/6538"><i class="material-icons">add_circle</i>&nbsp;Přidat</a>&nbsp;<div class="btn-group"><a role="button" class="btn btn-outline-secondary btn-xs dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a><ul class="dropdown-menu pull-right" role="menu"><li><a target="_blank" href="/Searchmasks/master/6538"><i class="material-icons">link</i>&nbsp;Odkaz na veřejný web</a></li></ul></div>&nbsp;				</td>
+        </tr>
+                    <tr>
+            <td class="wp5">
+                6539				</td>
+            <td class="wp15">
+                                        <a href="https://i.ccdn.cz/acm/502/882798/l0.jpg" data-fancybox="AccommodationImage" class="colorbox" rel="colorbox-6539" title="Ajman Hotel">
+                        <i class="material-icons">image</i>
+                    </a>
+                <a href="/admin/AccommodationMasters/view/6539">Ajman Hotel</a><p>ex: Kempinski Hotel Ajman
+
+            </p></td>
+            <td class="wp30">
+                Spojené arabské emiráty » Ajman				</td>
+            <td class="wp10">
+                Hotel				</td>
+            <td class="wp10">
+                5.0				</td>
+            <td class="wp5">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="actions text-right w130">
+                <a class="btn btn-success btn-xs" href="/admin/LocalAccommodationRatings/edit/6539"><i class="material-icons">add_circle</i>&nbsp;Přidat</a>&nbsp;<div class="btn-group"><a role="button" class="btn btn-outline-secondary btn-xs dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a><ul class="dropdown-menu pull-right" role="menu"><li><a target="_blank" href="/Searchmasks/master/6539"><i class="material-icons">link</i>&nbsp;Odkaz na veřejný web</a></li></ul></div>&nbsp;				</td>
+        </tr>
+                    <tr>
+            <td class="wp5">
+                6540				</td>
+            <td class="wp15">
+                                        <a href="https://i.ccdn.cz/acm/502/882954/l0.jpg" data-fancybox="AccommodationImage" class="colorbox" rel="colorbox-6540" title="Coral Beach Resort">
+                        <i class="material-icons">image</i>
+                    </a>
+                <a href="/admin/AccommodationMasters/view/6540">Coral Beach Resort</a>
+
+            </td>
+            <td class="wp30">
+                Spojené arabské emiráty » Sharjah				</td>
+            <td class="wp10">
+                Hotel				</td>
+            <td class="wp10">
+                4.0				</td>
+            <td class="wp5">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="actions text-right w130">
+                <a class="btn btn-success btn-xs" href="/admin/LocalAccommodationRatings/edit/6540"><i class="material-icons">add_circle</i>&nbsp;Přidat</a>&nbsp;<div class="btn-group"><a role="button" class="btn btn-outline-secondary btn-xs dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a><ul class="dropdown-menu pull-right" role="menu"><li><a target="_blank" href="/Searchmasks/master/6540"><i class="material-icons">link</i>&nbsp;Odkaz na veřejný web</a></li></ul></div>&nbsp;				</td>
+        </tr>
+                    <tr>
+            <td class="wp5">
+                6541				</td>
+            <td class="wp15">
+                <a href="/admin/AccommodationMasters/view/6541">Radisson Blu Resort Sharjah</a> <small>(léto)</small><p>ex: Sharjah Continental
+
+            </p></td>
+            <td class="wp30">
+                Spojené arabské emiráty » Sharjah				</td>
+            <td class="wp10">
+                Hotel				</td>
+            <td class="wp10">
+                5.0				</td>
+            <td class="wp5">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="actions text-right w130">
+                <a class="btn btn-success btn-xs" href="/admin/LocalAccommodationRatings/edit/6541"><i class="material-icons">add_circle</i>&nbsp;Přidat</a>&nbsp;<div class="btn-group"><a role="button" class="btn btn-outline-secondary btn-xs dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a><ul class="dropdown-menu pull-right" role="menu"><li><a target="_blank" href="/Searchmasks/master/6541"><i class="material-icons">link</i>&nbsp;Odkaz na veřejný web</a></li></ul></div>&nbsp;				</td>
+        </tr>
+                    <tr>
+            <td class="wp5">
+                6543				</td>
+            <td class="wp15">
+                                        <a href="https://i.ccdn.cz/acm/11/655880/l0.jpg" data-fancybox="AccommodationImage" class="colorbox" rel="colorbox-6543" title="Occidental Sharjah Grand">
+                        <i class="material-icons">image</i>
+                    </a>
+                <a href="/admin/AccommodationMasters/view/6543">Occidental Sharjah Grand</a> <small>(léto)</small><p>ex: Sharjah Grand
+
+            </p></td>
+            <td class="wp30">
+                Spojené arabské emiráty » Sharjah				</td>
+            <td class="wp10">
+                Hotel				</td>
+            <td class="wp10">
+                4.0				</td>
+            <td class="wp5">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="actions text-right w130">
+                <a class="btn btn-success btn-xs" href="/admin/LocalAccommodationRatings/edit/6543"><i class="material-icons">add_circle</i>&nbsp;Přidat</a>&nbsp;<div class="btn-group"><a role="button" class="btn btn-outline-secondary btn-xs dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a><ul class="dropdown-menu pull-right" role="menu"><li><a target="_blank" href="/Searchmasks/master/6543"><i class="material-icons">link</i>&nbsp;Odkaz na veřejný web</a></li></ul></div>&nbsp;				</td>
+        </tr>
+                    <tr>
+            <td class="wp5">
+                6544				</td>
+            <td class="wp15">
+                                        <a href="https://i.ccdn.cz/acm/502/882868/l0.jpg" data-fancybox="AccommodationImage" class="colorbox" rel="colorbox-6544" title="Lou Lou'a Beach Resort">
+                        <i class="material-icons">image</i>
+                    </a>
+                <a href="/admin/AccommodationMasters/view/6544">Lou Lou'a Beach Resort</a> <small>(léto)</small>
+
+            </td>
+            <td class="wp30">
+                Spojené arabské emiráty » Sharjah				</td>
+            <td class="wp10">
+                Hotel				</td>
+            <td class="wp10">
+                3.0				</td>
+            <td class="wp5">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="actions text-right w130">
+                <a class="btn btn-success btn-xs" href="/admin/LocalAccommodationRatings/edit/6544"><i class="material-icons">add_circle</i>&nbsp;Přidat</a>&nbsp;<div class="btn-group"><a role="button" class="btn btn-outline-secondary btn-xs dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a><ul class="dropdown-menu pull-right" role="menu"><li><a target="_blank" href="/Searchmasks/master/6544"><i class="material-icons">link</i>&nbsp;Odkaz na veřejný web</a></li></ul></div>&nbsp;				</td>
+        </tr>
+                    <tr>
+            <td class="wp5">
+                6545				</td>
+            <td class="wp15">
+                                        <a href="https://i.ccdn.cz/acm/80/400676/l0.jpg" data-fancybox="AccommodationImage" class="colorbox" rel="colorbox-6545" title="Umm Al Quwain Beach">
+                        <i class="material-icons">image</i>
+                    </a>
+                <a href="/admin/AccommodationMasters/view/6545">Umm Al Quwain Beach</a> <small>(léto)</small>
+
+            </td>
+            <td class="wp30">
+                Spojené arabské emiráty » Umm Al Quwain				</td>
+            <td class="wp10">
+                Hotel				</td>
+            <td class="wp10">
+                3.0				</td>
+            <td class="wp5">
+                Ano				</td>
+            <td class="wp10">
+                Ano				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="actions text-right w130">
+                <a class="btn btn-secondary btn-xs" href="/admin/LocalAccommodationRatings/edit/6545"><i class="material-icons">edit</i>&nbsp;Změnit</a>&nbsp;<div class="btn-group"><a role="button" class="btn btn-outline-secondary btn-xs dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a><ul class="dropdown-menu pull-right" role="menu"><li><a href="/admin/LocalAccommodationRatings/view/111"><i class="material-icons">visibility</i>&nbsp;Detail</a></li><li><a target="_blank" href="/Searchmasks/master/6545"><i class="material-icons">link</i>&nbsp;Odkaz na veřejný web</a></li><li class="divider"></li><li><a href="/admin/LocalAccommodationRatings/delete/111"><i class="material-icons">delete</i>&nbsp;Smazat</a></li></ul></div>&nbsp;				</td>
+        </tr>
+                    <tr>
+            <td class="wp5">
+                6548				</td>
+            <td class="wp15">
+                                        <a href="https://i.ccdn.cz/acm/502/882755/l0.jpg" data-fancybox="AccommodationImage" class="colorbox" rel="colorbox-6548" title="Emirates Palace">
+                        <i class="material-icons">image</i>
+                    </a>
+                <a href="/admin/AccommodationMasters/view/6548">Emirates Palace</a>
+
+            </td>
+            <td class="wp30">
+                Spojené arabské emiráty » Abu Dhabi				</td>
+            <td class="wp10">
+                Hotel				</td>
+            <td class="wp10">
+                5.0				</td>
+            <td class="wp5">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="actions text-right w130">
+                <a class="btn btn-success btn-xs" href="/admin/LocalAccommodationRatings/edit/6548"><i class="material-icons">add_circle</i>&nbsp;Přidat</a>&nbsp;<div class="btn-group"><a role="button" class="btn btn-outline-secondary btn-xs dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a><ul class="dropdown-menu pull-right" role="menu"><li><a target="_blank" href="/Searchmasks/master/6548"><i class="material-icons">link</i>&nbsp;Odkaz na veřejný web</a></li></ul></div>&nbsp;				</td>
+        </tr>
+                    <tr>
+            <td class="wp5">
+                6551				</td>
+            <td class="wp15">
+                                        <a href="https://i.ccdn.cz/acm/502/882877/l0.jpg" data-fancybox="AccommodationImage" class="colorbox" rel="colorbox-6551" title="Le Meridien Al Aqah Beach Resort">
+                        <i class="material-icons">image</i>
+                    </a>
+                <a href="/admin/AccommodationMasters/view/6551">Le Meridien Al Aqah Beach Resort</a>
+
+            </td>
+            <td class="wp30">
+                Spojené arabské emiráty » Fujairah				</td>
+            <td class="wp10">
+                Hotel				</td>
+            <td class="wp10">
+                5.0				</td>
+            <td class="wp5">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="actions text-right w130">
+                <a class="btn btn-success btn-xs" href="/admin/LocalAccommodationRatings/edit/6551"><i class="material-icons">add_circle</i>&nbsp;Přidat</a>&nbsp;<div class="btn-group"><a role="button" class="btn btn-outline-secondary btn-xs dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a><ul class="dropdown-menu pull-right" role="menu"><li><a target="_blank" href="/Searchmasks/master/6551"><i class="material-icons">link</i>&nbsp;Odkaz na veřejný web</a></li></ul></div>&nbsp;				</td>
+        </tr>
+                    <tr>
+            <td class="wp5">
+                6553				</td>
+            <td class="wp15">
+                                        <a href="https://i.ccdn.cz/acm/232/803478/l0.jpg" data-fancybox="AccommodationImage" class="colorbox" rel="colorbox-6553" title="Jumeirah Dar Al Masyaf">
+                        <i class="material-icons">image</i>
+                    </a>
+                <a href="/admin/AccommodationMasters/view/6553">Jumeirah Dar Al Masyaf</a>
+
+            </td>
+            <td class="wp30">
+                Spojené arabské emiráty » Dubaj » Jumeirah Beach				</td>
+            <td class="wp10">
+                Hotel				</td>
+            <td class="wp10">
+                5.0				</td>
+            <td class="wp5">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="actions text-right w130">
+                <a class="btn btn-success btn-xs" href="/admin/LocalAccommodationRatings/edit/6553"><i class="material-icons">add_circle</i>&nbsp;Přidat</a>&nbsp;<div class="btn-group"><a role="button" class="btn btn-outline-secondary btn-xs dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a><ul class="dropdown-menu pull-right" role="menu"><li><a target="_blank" href="/Searchmasks/master/6553"><i class="material-icons">link</i>&nbsp;Odkaz na veřejný web</a></li></ul></div>&nbsp;				</td>
+        </tr>
+                    <tr>
+            <td class="wp5">
+                6554				</td>
+            <td class="wp15">
+                                        <a href="https://i.ccdn.cz/acm/232/803438/l0.jpg" data-fancybox="AccommodationImage" class="colorbox" rel="colorbox-6554" title="Burj Al Arab">
+                        <i class="material-icons">image</i>
+                    </a>
+                <a href="/admin/AccommodationMasters/view/6554">Burj Al Arab</a>
+
+            </td>
+            <td class="wp30">
+                Spojené arabské emiráty » Dubaj				</td>
+            <td class="wp10">
+                Hotel				</td>
+            <td class="wp10">
+                7.0				</td>
+            <td class="wp5">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="actions text-right w130">
+                <a class="btn btn-success btn-xs" href="/admin/LocalAccommodationRatings/edit/6554"><i class="material-icons">add_circle</i>&nbsp;Přidat</a>&nbsp;<div class="btn-group"><a role="button" class="btn btn-outline-secondary btn-xs dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a><ul class="dropdown-menu pull-right" role="menu"><li><a target="_blank" href="/Searchmasks/master/6554"><i class="material-icons">link</i>&nbsp;Odkaz na veřejný web</a></li></ul></div>&nbsp;				</td>
+        </tr>
+                    <tr>
+            <td class="wp5">
+                6558				</td>
+            <td class="wp15">
+                                        <a href="https://i.ccdn.cz/acm/484/890420/l0.jpg" data-fancybox="AccommodationImage" class="colorbox" rel="colorbox-6558" title="Le Royal Meridien Beach Resort &amp; Spa">
+                        <i class="material-icons">image</i>
+                    </a>
+                <a href="/admin/AccommodationMasters/view/6558">Le Royal Meridien Beach Resort &amp; Spa</a>
+
+            </td>
+            <td class="wp30">
+                Spojené arabské emiráty » Dubaj				</td>
+            <td class="wp10">
+                Hotel				</td>
+            <td class="wp10">
+                5.0				</td>
+            <td class="wp5">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="actions text-right w130">
+                <a class="btn btn-success btn-xs" href="/admin/LocalAccommodationRatings/edit/6558"><i class="material-icons">add_circle</i>&nbsp;Přidat</a>&nbsp;<div class="btn-group"><a role="button" class="btn btn-outline-secondary btn-xs dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a><ul class="dropdown-menu pull-right" role="menu"><li><a target="_blank" href="/Searchmasks/master/6558"><i class="material-icons">link</i>&nbsp;Odkaz na veřejný web</a></li></ul></div>&nbsp;				</td>
+        </tr>
+                    <tr>
+            <td class="wp5">
+                6559				</td>
+            <td class="wp15">
+                                        <a href="https://i.ccdn.cz/acm/232/803473/l0.jpg" data-fancybox="AccommodationImage" class="colorbox" rel="colorbox-6559" title="Lavender Hotel Dubai">
+                        <i class="material-icons">image</i>
+                    </a>
+                <a href="/admin/AccommodationMasters/view/6559">Lavender Hotel Dubai</a> <small>(léto)</small><p>ex: Lords Hotel Dubai
+
+            </p></td>
+            <td class="wp30">
+                Spojené arabské emiráty » Dubaj				</td>
+            <td class="wp10">
+                Hotel				</td>
+            <td class="wp10">
+                3.0				</td>
+            <td class="wp5">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="actions text-right w130">
+                <a class="btn btn-success btn-xs" href="/admin/LocalAccommodationRatings/edit/6559"><i class="material-icons">add_circle</i>&nbsp;Přidat</a>&nbsp;<div class="btn-group"><a role="button" class="btn btn-outline-secondary btn-xs dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a><ul class="dropdown-menu pull-right" role="menu"><li><a target="_blank" href="/Searchmasks/master/6559"><i class="material-icons">link</i>&nbsp;Odkaz na veřejný web</a></li></ul></div>&nbsp;				</td>
+        </tr>
+                    <tr>
+            <td class="wp5">
+                6561				</td>
+            <td class="wp15">
+                                        <a href="https://i.ccdn.cz/acm/232/803479/l0.jpg" data-fancybox="AccommodationImage" class="colorbox" rel="colorbox-6561" title="Jumeirah Mina A'Salam">
+                        <i class="material-icons">image</i>
+                    </a>
+                <a href="/admin/AccommodationMasters/view/6561">Jumeirah Mina A'Salam</a>
+
+            </td>
+            <td class="wp30">
+                Spojené arabské emiráty » Dubaj				</td>
+            <td class="wp10">
+                Hotel				</td>
+            <td class="wp10">
+                5.0				</td>
+            <td class="wp5">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="actions text-right w130">
+                <a class="btn btn-success btn-xs" href="/admin/LocalAccommodationRatings/edit/6561"><i class="material-icons">add_circle</i>&nbsp;Přidat</a>&nbsp;<div class="btn-group"><a role="button" class="btn btn-outline-secondary btn-xs dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a><ul class="dropdown-menu pull-right" role="menu"><li><a target="_blank" href="/Searchmasks/master/6561"><i class="material-icons">link</i>&nbsp;Odkaz na veřejný web</a></li></ul></div>&nbsp;				</td>
+        </tr>
+                    <tr>
+            <td class="wp5">
+                6563				</td>
+            <td class="wp15">
+                                        <a href="https://i.ccdn.cz/acm/484/869201/l0.jpg" data-fancybox="AccommodationImage" class="colorbox" rel="colorbox-6563" title="Savoy Suites">
+                        <i class="material-icons">image</i>
+                    </a>
+                <a href="/admin/AccommodationMasters/view/6563">Savoy Suites</a> <small>(léto)</small>
+
+            </td>
+            <td class="wp30">
+                Spojené arabské emiráty » Dubaj				</td>
+            <td class="wp10">
+                Hotel				</td>
+            <td class="wp10">
+                4.0				</td>
+            <td class="wp5">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="actions text-right w130">
+                <a class="btn btn-success btn-xs" href="/admin/LocalAccommodationRatings/edit/6563"><i class="material-icons">add_circle</i>&nbsp;Přidat</a>&nbsp;<div class="btn-group"><a role="button" class="btn btn-outline-secondary btn-xs dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a><ul class="dropdown-menu pull-right" role="menu"><li><a target="_blank" href="/Searchmasks/master/6563"><i class="material-icons">link</i>&nbsp;Odkaz na veřejný web</a></li></ul></div>&nbsp;				</td>
+        </tr>
+                    <tr>
+            <td class="wp5">
+                6564				</td>
+            <td class="wp15">
+                                        <a href="https://i.ccdn.cz/acm/289/655576/l0.jpg" data-fancybox="AccommodationImage" class="colorbox" rel="colorbox-6564" title="Sheraton Jumeirah Beach Resort &amp; Towers">
+                        <i class="material-icons">image</i>
+                    </a>
+                <a href="/admin/AccommodationMasters/view/6564">Sheraton Jumeirah Beach Resort &amp; Towers</a> <small>(léto)</small>
+
+            </td>
+            <td class="wp30">
+                Spojené arabské emiráty » Dubaj				</td>
+            <td class="wp10">
+                Hotel				</td>
+            <td class="wp10">
+                5.0				</td>
+            <td class="wp5">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="actions text-right w130">
+                <a class="btn btn-success btn-xs" href="/admin/LocalAccommodationRatings/edit/6564"><i class="material-icons">add_circle</i>&nbsp;Přidat</a>&nbsp;<div class="btn-group"><a role="button" class="btn btn-outline-secondary btn-xs dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a><ul class="dropdown-menu pull-right" role="menu"><li><a target="_blank" href="/Searchmasks/master/6564"><i class="material-icons">link</i>&nbsp;Odkaz na veřejný web</a></li></ul></div>&nbsp;				</td>
+        </tr>
+                    <tr>
+            <td class="wp5">
+                6574				</td>
+            <td class="wp15">
+                                        <a href="https://i.ccdn.cz/acm/502/882746/l0.jpg" data-fancybox="AccommodationImage" class="colorbox" rel="colorbox-6574" title="Atlantis The Palm">
+                        <i class="material-icons">image</i>
+                    </a>
+                <a href="/admin/AccommodationMasters/view/6574">Atlantis The Palm</a> <small>(léto)</small>
+
+            </td>
+            <td class="wp30">
+                Spojené arabské emiráty » Dubaj				</td>
+            <td class="wp10">
+                Hotel				</td>
+            <td class="wp10">
+                5.0				</td>
+            <td class="wp5">
+                Ano				</td>
+            <td class="wp10">
+                Ano				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="actions text-right w130">
+                <a class="btn btn-secondary btn-xs" href="/admin/LocalAccommodationRatings/edit/6574"><i class="material-icons">edit</i>&nbsp;Změnit</a>&nbsp;<div class="btn-group"><a role="button" class="btn btn-outline-secondary btn-xs dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a><ul class="dropdown-menu pull-right" role="menu"><li><a href="/admin/LocalAccommodationRatings/view/70"><i class="material-icons">visibility</i>&nbsp;Detail</a></li><li><a target="_blank" href="/Searchmasks/master/6574"><i class="material-icons">link</i>&nbsp;Odkaz na veřejný web</a></li><li class="divider"></li><li><a href="/admin/LocalAccommodationRatings/delete/70"><i class="material-icons">delete</i>&nbsp;Smazat</a></li></ul></div>&nbsp;				</td>
+        </tr>
+                    <tr>
+            <td class="wp5">
+                6575				</td>
+            <td class="wp15">
+                                        <a href="https://i.ccdn.cz/acm/484/890475/l0.jpg" data-fancybox="AccommodationImage" class="colorbox" rel="colorbox-6575" title="JA Beach Hotel">
+                        <i class="material-icons">image</i>
+                    </a>
+                <a href="/admin/AccommodationMasters/view/6575">JA Beach Hotel</a><p>ex: JA Jebel Ali Beach Hotel
+
+            </p></td>
+            <td class="wp30">
+                Spojené arabské emiráty » Dubaj				</td>
+            <td class="wp10">
+                Hotel				</td>
+            <td class="wp10">
+                5.0				</td>
+            <td class="wp5">
+                Ano				</td>
+            <td class="wp10">
+                Ano				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="actions text-right w130">
+                <a class="btn btn-secondary btn-xs" href="/admin/LocalAccommodationRatings/edit/6575"><i class="material-icons">edit</i>&nbsp;Změnit</a>&nbsp;<div class="btn-group"><a role="button" class="btn btn-outline-secondary btn-xs dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a><ul class="dropdown-menu pull-right" role="menu"><li><a href="/admin/LocalAccommodationRatings/view/77"><i class="material-icons">visibility</i>&nbsp;Detail</a></li><li><a target="_blank" href="/Searchmasks/master/6575"><i class="material-icons">link</i>&nbsp;Odkaz na veřejný web</a></li><li class="divider"></li><li><a href="/admin/LocalAccommodationRatings/delete/77"><i class="material-icons">delete</i>&nbsp;Smazat</a></li></ul></div>&nbsp;				</td>
+        </tr>
+                    <tr>
+            <td class="wp5">
+                6594				</td>
+            <td class="wp15">
+                <a href="/admin/AccommodationMasters/view/6594">Nexus Resort Karambunai</a>
+
+            </td>
+            <td class="wp30">
+                Malajsie » ostrov Borneo				</td>
+            <td class="wp10">
+                Hotel				</td>
+            <td class="wp10">
+                5.0				</td>
+            <td class="wp5">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="actions text-right w130">
+                <a class="btn btn-success btn-xs" href="/admin/LocalAccommodationRatings/edit/6594"><i class="material-icons">add_circle</i>&nbsp;Přidat</a>&nbsp;<div class="btn-group"><a role="button" class="btn btn-outline-secondary btn-xs dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a><ul class="dropdown-menu pull-right" role="menu"><li><a target="_blank" href="/Searchmasks/master/6594"><i class="material-icons">link</i>&nbsp;Odkaz na veřejný web</a></li></ul></div>&nbsp;				</td>
+        </tr>
+                    <tr>
+            <td class="wp5">
+                6606				</td>
+            <td class="wp15">
+                <a href="/admin/AccommodationMasters/view/6606">Prima Music</a>
+
+            </td>
+            <td class="wp30">
+                Izrael » Rudé moře				</td>
+            <td class="wp10">
+                Hotel				</td>
+            <td class="wp10">
+                4.0				</td>
+            <td class="wp5">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="actions text-right w130">
+                <a class="btn btn-success btn-xs" href="/admin/LocalAccommodationRatings/edit/6606"><i class="material-icons">add_circle</i>&nbsp;Přidat</a>&nbsp;<div class="btn-group"><a role="button" class="btn btn-outline-secondary btn-xs dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a><ul class="dropdown-menu pull-right" role="menu"><li><a target="_blank" href="/Searchmasks/master/6606"><i class="material-icons">link</i>&nbsp;Odkaz na veřejný web</a></li></ul></div>&nbsp;				</td>
+        </tr>
+                    <tr>
+            <td class="wp5">
+                6608				</td>
+            <td class="wp15">
+                <a href="/admin/AccommodationMasters/view/6608">Bali Reef Resort</a>
+
+            </td>
+            <td class="wp30">
+                Indonésie » Bali » Benoa				</td>
+            <td class="wp10">
+                Hotel				</td>
+            <td class="wp10">
+                4.0				</td>
+            <td class="wp5">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="actions text-right w130">
+                <a class="btn btn-success btn-xs" href="/admin/LocalAccommodationRatings/edit/6608"><i class="material-icons">add_circle</i>&nbsp;Přidat</a>&nbsp;<div class="btn-group"><a role="button" class="btn btn-outline-secondary btn-xs dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a><ul class="dropdown-menu pull-right" role="menu"><li><a target="_blank" href="/Searchmasks/master/6608"><i class="material-icons">link</i>&nbsp;Odkaz na veřejný web</a></li></ul></div>&nbsp;				</td>
+        </tr>
+                    <tr>
+            <td class="wp5">
+                6609				</td>
+            <td class="wp15">
+                <a href="/admin/AccommodationMasters/view/6609">Club Bali Mirage</a>
+
+            </td>
+            <td class="wp30">
+                Indonésie » Bali » Benoa				</td>
+            <td class="wp10">
+                Hotel				</td>
+            <td class="wp10">
+                4.0				</td>
+            <td class="wp5">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="actions text-right w130">
+                <a class="btn btn-success btn-xs" href="/admin/LocalAccommodationRatings/edit/6609"><i class="material-icons">add_circle</i>&nbsp;Přidat</a>&nbsp;<div class="btn-group"><a role="button" class="btn btn-outline-secondary btn-xs dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a><ul class="dropdown-menu pull-right" role="menu"><li><a target="_blank" href="/Searchmasks/master/6609"><i class="material-icons">link</i>&nbsp;Odkaz na veřejný web</a></li></ul></div>&nbsp;				</td>
+        </tr>
+                    <tr>
+            <td class="wp5">
+                6611				</td>
+            <td class="wp15">
+                                        <a href="https://i.ccdn.cz/acm/80/853835/l0.jpg" data-fancybox="AccommodationImage" class="colorbox" rel="colorbox-6611" title="Sol by Melia Benoa Bali">
+                        <i class="material-icons">image</i>
+                    </a>
+                <a href="/admin/AccommodationMasters/view/6611">Sol by Melia Benoa Bali</a><p>ex: Sol Beach House Benoa
+
+            </p></td>
+            <td class="wp30">
+                Indonésie » Bali » Benoa				</td>
+            <td class="wp10">
+                Hotel				</td>
+            <td class="wp10">
+                5.0				</td>
+            <td class="wp5">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="actions text-right w130">
+                <a class="btn btn-success btn-xs" href="/admin/LocalAccommodationRatings/edit/6611"><i class="material-icons">add_circle</i>&nbsp;Přidat</a>&nbsp;<div class="btn-group"><a role="button" class="btn btn-outline-secondary btn-xs dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a><ul class="dropdown-menu pull-right" role="menu"><li><a target="_blank" href="/Searchmasks/master/6611"><i class="material-icons">link</i>&nbsp;Odkaz na veřejný web</a></li></ul></div>&nbsp;				</td>
+        </tr>
+                    <tr>
+            <td class="wp5">
+                6614				</td>
+            <td class="wp15">
+                                        <a href="https://i.ccdn.cz/acm/184/860555/l0.jpg" data-fancybox="AccommodationImage" class="colorbox" rel="colorbox-6614" title="Sadara Boutique Beach Resort">
+                        <i class="material-icons">image</i>
+                    </a>
+                <a href="/admin/AccommodationMasters/view/6614">Sadara Boutique Beach Resort</a>
+
+            </td>
+            <td class="wp30">
+                Indonésie » Bali » Benoa				</td>
+            <td class="wp10">
+                Hotel				</td>
+            <td class="wp10">
+                4.0				</td>
+            <td class="wp5">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="actions text-right w130">
+                <a class="btn btn-success btn-xs" href="/admin/LocalAccommodationRatings/edit/6614"><i class="material-icons">add_circle</i>&nbsp;Přidat</a>&nbsp;<div class="btn-group"><a role="button" class="btn btn-outline-secondary btn-xs dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a><ul class="dropdown-menu pull-right" role="menu"><li><a target="_blank" href="/Searchmasks/master/6614"><i class="material-icons">link</i>&nbsp;Odkaz na veřejný web</a></li></ul></div>&nbsp;				</td>
+        </tr>
+                    <tr>
+            <td class="wp5">
+                6615				</td>
+            <td class="wp15">
+                                        <a href="https://i.ccdn.cz/acm/289/881108/l0.jpg" data-fancybox="AccommodationImage" class="colorbox" rel="colorbox-6615" title="Melia Bali">
+                        <i class="material-icons">image</i>
+                    </a>
+                <a href="/admin/AccommodationMasters/view/6615">Melia Bali</a> <small>(léto)</small><p>ex: Meliá Bali - The Garden Villas
+
+            </p></td>
+            <td class="wp30">
+                Indonésie » Bali » Nusa Dua				</td>
+            <td class="wp10">
+                Hotel				</td>
+            <td class="wp10">
+                5.0				</td>
+            <td class="wp5">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="actions text-right w130">
+                <a class="btn btn-success btn-xs" href="/admin/LocalAccommodationRatings/edit/6615"><i class="material-icons">add_circle</i>&nbsp;Přidat</a>&nbsp;<div class="btn-group"><a role="button" class="btn btn-outline-secondary btn-xs dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a><ul class="dropdown-menu pull-right" role="menu"><li><a target="_blank" href="/Searchmasks/master/6615"><i class="material-icons">link</i>&nbsp;Odkaz na veřejný web</a></li></ul></div>&nbsp;				</td>
+        </tr>
+                    <tr>
+            <td class="wp5">
+                6617				</td>
+            <td class="wp15">
+                <a href="/admin/AccommodationMasters/view/6617">Vilarisi</a>
+
+            </td>
+            <td class="wp30">
+                Indonésie » Bali » Kuta				</td>
+            <td class="wp10">
+                Hotel				</td>
+            <td class="wp10">
+                3.0				</td>
+            <td class="wp5">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="actions text-right w130">
+                <a class="btn btn-success btn-xs" href="/admin/LocalAccommodationRatings/edit/6617"><i class="material-icons">add_circle</i>&nbsp;Přidat</a>&nbsp;<div class="btn-group"><a role="button" class="btn btn-outline-secondary btn-xs dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a><ul class="dropdown-menu pull-right" role="menu"><li><a target="_blank" href="/Searchmasks/master/6617"><i class="material-icons">link</i>&nbsp;Odkaz na veřejný web</a></li></ul></div>&nbsp;				</td>
+        </tr>
+                    <tr>
+            <td class="wp5">
+                6627				</td>
+            <td class="wp15">
+                <a href="/admin/AccommodationMasters/view/6627">Leonardo Club Dead Sea</a>
+
+            </td>
+            <td class="wp30">
+                Izrael » Mrtvé moře				</td>
+            <td class="wp10">
+                Hotel				</td>
+            <td class="wp10">
+                4.0				</td>
+            <td class="wp5">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="actions text-right w130">
+                <a class="btn btn-success btn-xs" href="/admin/LocalAccommodationRatings/edit/6627"><i class="material-icons">add_circle</i>&nbsp;Přidat</a>&nbsp;<div class="btn-group"><a role="button" class="btn btn-outline-secondary btn-xs dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a><ul class="dropdown-menu pull-right" role="menu"><li><a target="_blank" href="/Searchmasks/master/6627"><i class="material-icons">link</i>&nbsp;Odkaz na veřejný web</a></li></ul></div>&nbsp;				</td>
+        </tr>
+                    <tr>
+            <td class="wp5">
+                6628				</td>
+            <td class="wp15">
+                <a href="/admin/AccommodationMasters/view/6628">Crowne Plaza</a>
+
+            </td>
+            <td class="wp30">
+                Izrael » Mrtvé moře				</td>
+            <td class="wp10">
+                Hotel				</td>
+            <td class="wp10">
+                5.0				</td>
+            <td class="wp5">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="actions text-right w130">
+                <a class="btn btn-success btn-xs" href="/admin/LocalAccommodationRatings/edit/6628"><i class="material-icons">add_circle</i>&nbsp;Přidat</a>&nbsp;<div class="btn-group"><a role="button" class="btn btn-outline-secondary btn-xs dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a><ul class="dropdown-menu pull-right" role="menu"><li><a target="_blank" href="/Searchmasks/master/6628"><i class="material-icons">link</i>&nbsp;Odkaz na veřejný web</a></li></ul></div>&nbsp;				</td>
+        </tr>
+                    <tr>
+            <td class="wp5">
+                6631				</td>
+            <td class="wp15">
+                <a href="/admin/AccommodationMasters/view/6631">Hotel Tsell Harim</a>
+
+            </td>
+            <td class="wp30">
+                Izrael » Mrtvé moře				</td>
+            <td class="wp10">
+                Hotel				</td>
+            <td class="wp10">
+                3.0				</td>
+            <td class="wp5">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="actions text-right w130">
+                <a class="btn btn-success btn-xs" href="/admin/LocalAccommodationRatings/edit/6631"><i class="material-icons">add_circle</i>&nbsp;Přidat</a>&nbsp;<div class="btn-group"><a role="button" class="btn btn-outline-secondary btn-xs dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a><ul class="dropdown-menu pull-right" role="menu"><li><a target="_blank" href="/Searchmasks/master/6631"><i class="material-icons">link</i>&nbsp;Odkaz na veřejný web</a></li></ul></div>&nbsp;				</td>
+        </tr>
+                    <tr>
+            <td class="wp5">
+                6635				</td>
+            <td class="wp15">
+                                        <a href="https://i.ccdn.cz/acm/10/859647/l0.jpg" data-fancybox="AccommodationImage" class="colorbox" rel="colorbox-6635" title="Melia Las Dunas">
+                        <i class="material-icons">image</i>
+                    </a>
+                <a href="/admin/AccommodationMasters/view/6635">Melia Las Dunas</a>
+
+            </td>
+            <td class="wp30">
+                Kuba » Cayo Santa Maria				</td>
+            <td class="wp10">
+                Hotel				</td>
+            <td class="wp10">
+                5.0				</td>
+            <td class="wp5">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="actions text-right w130">
+                <a class="btn btn-success btn-xs" href="/admin/LocalAccommodationRatings/edit/6635"><i class="material-icons">add_circle</i>&nbsp;Přidat</a>&nbsp;<div class="btn-group"><a role="button" class="btn btn-outline-secondary btn-xs dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a><ul class="dropdown-menu pull-right" role="menu"><li><a target="_blank" href="/Searchmasks/master/6635"><i class="material-icons">link</i>&nbsp;Odkaz na veřejný web</a></li></ul></div>&nbsp;				</td>
+        </tr>
+                    <tr>
+            <td class="wp5">
+                6637				</td>
+            <td class="wp15">
+                                        <a href="https://i.ccdn.cz/acm/59/863491/l0.jpg" data-fancybox="AccommodationImage" class="colorbox" rel="colorbox-6637" title="Sol Cayo Santa Maria">
+                        <i class="material-icons">image</i>
+                    </a>
+                <a href="/admin/AccommodationMasters/view/6637">Sol Cayo Santa Maria</a>
+
+            </td>
+            <td class="wp30">
+                Kuba » Cayo Santa Maria				</td>
+            <td class="wp10">
+                Hotel				</td>
+            <td class="wp10">
+                4.0				</td>
+            <td class="wp5">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="actions text-right w130">
+                <a class="btn btn-success btn-xs" href="/admin/LocalAccommodationRatings/edit/6637"><i class="material-icons">add_circle</i>&nbsp;Přidat</a>&nbsp;<div class="btn-group"><a role="button" class="btn btn-outline-secondary btn-xs dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a><ul class="dropdown-menu pull-right" role="menu"><li><a target="_blank" href="/Searchmasks/master/6637"><i class="material-icons">link</i>&nbsp;Odkaz na veřejný web</a></li></ul></div>&nbsp;				</td>
+        </tr>
+                    <tr>
+            <td class="wp5">
+                6639				</td>
+            <td class="wp15">
+                                        <a href="https://i.ccdn.cz/acm/232/802567/l0.jpg" data-fancybox="AccommodationImage" class="colorbox" rel="colorbox-6639" title="Plaza">
+                        <i class="material-icons">image</i>
+                    </a>
+                <a href="/admin/AccommodationMasters/view/6639">Plaza</a>
+
+            </td>
+            <td class="wp30">
+                Kuba » Havana				</td>
+            <td class="wp10">
+                Hotel				</td>
+            <td class="wp10">
+                4.0				</td>
+            <td class="wp5">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="actions text-right w130">
+                <a class="btn btn-success btn-xs" href="/admin/LocalAccommodationRatings/edit/6639"><i class="material-icons">add_circle</i>&nbsp;Přidat</a>&nbsp;<div class="btn-group"><a role="button" class="btn btn-outline-secondary btn-xs dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a><ul class="dropdown-menu pull-right" role="menu"><li><a target="_blank" href="/Searchmasks/master/6639"><i class="material-icons">link</i>&nbsp;Odkaz na veřejný web</a></li></ul></div>&nbsp;				</td>
+        </tr>
+                    <tr>
+            <td class="wp5">
+                6644				</td>
+            <td class="wp15">
+                                        <a href="https://i.ccdn.cz/acm/232/834433/l0.jpg" data-fancybox="AccommodationImage" class="colorbox" rel="colorbox-6644" title="Gran Caribe Club Kawama">
+                        <i class="material-icons">image</i>
+                    </a>
+                <a href="/admin/AccommodationMasters/view/6644">Gran Caribe Club Kawama</a>
+
+            </td>
+            <td class="wp30">
+                Kuba » Varadero				</td>
+            <td class="wp10">
+                Hotel				</td>
+            <td class="wp10">
+                3.0				</td>
+            <td class="wp5">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="actions text-right w130">
+                <a class="btn btn-success btn-xs" href="/admin/LocalAccommodationRatings/edit/6644"><i class="material-icons">add_circle</i>&nbsp;Přidat</a>&nbsp;<div class="btn-group"><a role="button" class="btn btn-outline-secondary btn-xs dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a><ul class="dropdown-menu pull-right" role="menu"><li><a target="_blank" href="/Searchmasks/master/6644"><i class="material-icons">link</i>&nbsp;Odkaz na veřejný web</a></li></ul></div>&nbsp;				</td>
+        </tr>
+                    <tr>
+            <td class="wp5">
+                6646				</td>
+            <td class="wp15">
+                                        <a href="https://i.ccdn.cz/acm/57/804817/l0.jpg" data-fancybox="AccommodationImage" class="colorbox" rel="colorbox-6646" title="Hotel Mar del Sur">
+                        <i class="material-icons">image</i>
+                    </a>
+                <a href="/admin/AccommodationMasters/view/6646">Hotel Mar del Sur</a>
+
+            </td>
+            <td class="wp30">
+                Kuba » Varadero				</td>
+            <td class="wp10">
+                Hotel				</td>
+            <td class="wp10">
+                2.0				</td>
+            <td class="wp5">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="actions text-right w130">
+                <a class="btn btn-success btn-xs" href="/admin/LocalAccommodationRatings/edit/6646"><i class="material-icons">add_circle</i>&nbsp;Přidat</a>&nbsp;<div class="btn-group"><a role="button" class="btn btn-outline-secondary btn-xs dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a><ul class="dropdown-menu pull-right" role="menu"><li><a target="_blank" href="/Searchmasks/master/6646"><i class="material-icons">link</i>&nbsp;Odkaz na veřejný web</a></li></ul></div>&nbsp;				</td>
+        </tr>
+                    <tr>
+            <td class="wp5">
+                6648				</td>
+            <td class="wp15">
+                                        <a href="https://i.ccdn.cz/acm/484/857039/l0.jpg" data-fancybox="AccommodationImage" class="colorbox" rel="colorbox-6648" title="Blau Varadero">
+                        <i class="material-icons">image</i>
+                    </a>
+                <a href="/admin/AccommodationMasters/view/6648">Blau Varadero</a>
+
+            </td>
+            <td class="wp30">
+                Kuba » Varadero				</td>
+            <td class="wp10">
+                Hotel				</td>
+            <td class="wp10">
+                4.0				</td>
+            <td class="wp5">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="actions text-right w130">
+                <a class="btn btn-success btn-xs" href="/admin/LocalAccommodationRatings/edit/6648"><i class="material-icons">add_circle</i>&nbsp;Přidat</a>&nbsp;<div class="btn-group"><a role="button" class="btn btn-outline-secondary btn-xs dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a><ul class="dropdown-menu pull-right" role="menu"><li><a target="_blank" href="/Searchmasks/master/6648"><i class="material-icons">link</i>&nbsp;Odkaz na veřejný web</a></li></ul></div>&nbsp;				</td>
+        </tr>
+                    <tr>
+            <td class="wp5">
+                6651				</td>
+            <td class="wp15">
+                                        <a href="https://i.ccdn.cz/acm/57/804841/l0.jpg" data-fancybox="AccommodationImage" class="colorbox" rel="colorbox-6651" title="Roc Barlovento">
+                        <i class="material-icons">image</i>
+                    </a>
+                <a href="/admin/AccommodationMasters/view/6651">Roc Barlovento</a>
+
+            </td>
+            <td class="wp30">
+                Kuba » Varadero				</td>
+            <td class="wp10">
+                Hotel				</td>
+            <td class="wp10">
+                4.0				</td>
+            <td class="wp5">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="actions text-right w130">
+                <a class="btn btn-success btn-xs" href="/admin/LocalAccommodationRatings/edit/6651"><i class="material-icons">add_circle</i>&nbsp;Přidat</a>&nbsp;<div class="btn-group"><a role="button" class="btn btn-outline-secondary btn-xs dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a><ul class="dropdown-menu pull-right" role="menu"><li><a target="_blank" href="/Searchmasks/master/6651"><i class="material-icons">link</i>&nbsp;Odkaz na veřejný web</a></li></ul></div>&nbsp;				</td>
+        </tr>
+                    <tr>
+            <td class="wp5">
+                6652				</td>
+            <td class="wp15">
+                <a href="/admin/AccommodationMasters/view/6652">Herradura</a>
+
+            </td>
+            <td class="wp30">
+                Kuba » Varadero				</td>
+            <td class="wp10">
+                Hotel				</td>
+            <td class="wp10">
+                2.0				</td>
+            <td class="wp5">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="actions text-right w130">
+                <a class="btn btn-success btn-xs" href="/admin/LocalAccommodationRatings/edit/6652"><i class="material-icons">add_circle</i>&nbsp;Přidat</a>&nbsp;<div class="btn-group"><a role="button" class="btn btn-outline-secondary btn-xs dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a><ul class="dropdown-menu pull-right" role="menu"><li><a target="_blank" href="/Searchmasks/master/6652"><i class="material-icons">link</i>&nbsp;Odkaz na veřejný web</a></li></ul></div>&nbsp;				</td>
+        </tr>
+                    <tr>
+            <td class="wp5">
+                6653				</td>
+            <td class="wp15">
+                <a href="/admin/AccommodationMasters/view/6653">Hotel Los Delfines</a>
+
+            </td>
+            <td class="wp30">
+                Kuba » Varadero				</td>
+            <td class="wp10">
+                Hotel				</td>
+            <td class="wp10">
+                3.0				</td>
+            <td class="wp5">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="actions text-right w130">
+                <a class="btn btn-success btn-xs" href="/admin/LocalAccommodationRatings/edit/6653"><i class="material-icons">add_circle</i>&nbsp;Přidat</a>&nbsp;<div class="btn-group"><a role="button" class="btn btn-outline-secondary btn-xs dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a><ul class="dropdown-menu pull-right" role="menu"><li><a target="_blank" href="/Searchmasks/master/6653"><i class="material-icons">link</i>&nbsp;Odkaz na veřejný web</a></li></ul></div>&nbsp;				</td>
+        </tr>
+                    <tr>
+            <td class="wp5">
+                6655				</td>
+            <td class="wp15">
+                                        <a href="https://i.ccdn.cz/acm/289/821457/l0.jpg" data-fancybox="AccommodationImage" class="colorbox" rel="colorbox-6655" title="Melia Varadero">
+                        <i class="material-icons">image</i>
+                    </a>
+                <a href="/admin/AccommodationMasters/view/6655">Melia Varadero</a>
+
+            </td>
+            <td class="wp30">
+                Kuba » Varadero				</td>
+            <td class="wp10">
+                Hotel				</td>
+            <td class="wp10">
+                5.0				</td>
+            <td class="wp5">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="actions text-right w130">
+                <a class="btn btn-success btn-xs" href="/admin/LocalAccommodationRatings/edit/6655"><i class="material-icons">add_circle</i>&nbsp;Přidat</a>&nbsp;<div class="btn-group"><a role="button" class="btn btn-outline-secondary btn-xs dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a><ul class="dropdown-menu pull-right" role="menu"><li><a target="_blank" href="/Searchmasks/master/6655"><i class="material-icons">link</i>&nbsp;Odkaz na veřejný web</a></li></ul></div>&nbsp;				</td>
+        </tr>
+                    <tr>
+            <td class="wp5">
+                6656				</td>
+            <td class="wp15">
+                                        <a href="https://i.ccdn.cz/acm/57/804819/l0.jpg" data-fancybox="AccommodationImage" class="colorbox" rel="colorbox-6656" title="Hotel Tuxpan">
+                        <i class="material-icons">image</i>
+                    </a>
+                <a href="/admin/AccommodationMasters/view/6656">Hotel Tuxpan</a>
+
+            </td>
+            <td class="wp30">
+                Kuba » Varadero				</td>
+            <td class="wp10">
+                Hotel				</td>
+            <td class="wp10">
+                3.5				</td>
+            <td class="wp5">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="actions text-right w130">
+                <a class="btn btn-success btn-xs" href="/admin/LocalAccommodationRatings/edit/6656"><i class="material-icons">add_circle</i>&nbsp;Přidat</a>&nbsp;<div class="btn-group"><a role="button" class="btn btn-outline-secondary btn-xs dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a><ul class="dropdown-menu pull-right" role="menu"><li><a target="_blank" href="/Searchmasks/master/6656"><i class="material-icons">link</i>&nbsp;Odkaz na veřejný web</a></li></ul></div>&nbsp;				</td>
+        </tr>
+                    <tr>
+            <td class="wp5">
+                6658				</td>
+            <td class="wp15">
+                                        <a href="https://i.ccdn.cz/acm/484/857150/l0.jpg" data-fancybox="AccommodationImage" class="colorbox" rel="colorbox-6658" title="Paradisus Varadero Resort &amp; Spa">
+                        <i class="material-icons">image</i>
+                    </a>
+                <a href="/admin/AccommodationMasters/view/6658">Paradisus Varadero Resort &amp; Spa</a>
+
+            </td>
+            <td class="wp30">
+                Kuba » Varadero				</td>
+            <td class="wp10">
+                Hotel				</td>
+            <td class="wp10">
+                5.0				</td>
+            <td class="wp5">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="actions text-right w130">
+                <a class="btn btn-success btn-xs" href="/admin/LocalAccommodationRatings/edit/6658"><i class="material-icons">add_circle</i>&nbsp;Přidat</a>&nbsp;<div class="btn-group"><a role="button" class="btn btn-outline-secondary btn-xs dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a><ul class="dropdown-menu pull-right" role="menu"><li><a target="_blank" href="/Searchmasks/master/6658"><i class="material-icons">link</i>&nbsp;Odkaz na veřejný web</a></li></ul></div>&nbsp;				</td>
+        </tr>
+                    <tr>
+            <td class="wp5">
+                6659				</td>
+            <td class="wp15">
+                                        <a href="https://i.ccdn.cz/acm/289/866310/l0.jpg" data-fancybox="AccommodationImage" class="colorbox" rel="colorbox-6659" title="Sandals Royal Hicacos Resort &amp; Spa">
+                        <i class="material-icons">image</i>
+                    </a>
+                <a href="/admin/AccommodationMasters/view/6659">Sandals Royal Hicacos Resort &amp; Spa</a>
+
+            </td>
+            <td class="wp30">
+                Kuba » Varadero				</td>
+            <td class="wp10">
+                Hotel				</td>
+            <td class="wp10">
+                5.0				</td>
+            <td class="wp5">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="actions text-right w130">
+                <a class="btn btn-success btn-xs" href="/admin/LocalAccommodationRatings/edit/6659"><i class="material-icons">add_circle</i>&nbsp;Přidat</a>&nbsp;<div class="btn-group"><a role="button" class="btn btn-outline-secondary btn-xs dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a><ul class="dropdown-menu pull-right" role="menu"><li><a target="_blank" href="/Searchmasks/master/6659"><i class="material-icons">link</i>&nbsp;Odkaz na veřejný web</a></li></ul></div>&nbsp;				</td>
+        </tr>
+                    <tr>
+            <td class="wp5">
+                6660				</td>
+            <td class="wp15">
+                                        <a href="https://i.ccdn.cz/acm/289/392504/l0.jpg" data-fancybox="AccommodationImage" class="colorbox" rel="colorbox-6660" title="Melia Peninsula Varadero">
+                        <i class="material-icons">image</i>
+                    </a>
+                <a href="/admin/AccommodationMasters/view/6660">Melia Peninsula Varadero</a> <small>(léto)</small>
+
+            </td>
+            <td class="wp30">
+                Kuba » Varadero				</td>
+            <td class="wp10">
+                Hotel				</td>
+            <td class="wp10">
+                5.0				</td>
+            <td class="wp5">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="actions text-right w130">
+                <a class="btn btn-success btn-xs" href="/admin/LocalAccommodationRatings/edit/6660"><i class="material-icons">add_circle</i>&nbsp;Přidat</a>&nbsp;<div class="btn-group"><a role="button" class="btn btn-outline-secondary btn-xs dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a><ul class="dropdown-menu pull-right" role="menu"><li><a target="_blank" href="/Searchmasks/master/6660"><i class="material-icons">link</i>&nbsp;Odkaz na veřejný web</a></li></ul></div>&nbsp;				</td>
+        </tr>
+                    <tr>
+            <td class="wp5">
+                6663				</td>
+            <td class="wp15">
+                                        <a href="https://i.ccdn.cz/acm/232/802566/l0.jpg" data-fancybox="AccommodationImage" class="colorbox" rel="colorbox-6663" title="Roc Presidente">
+                        <i class="material-icons">image</i>
+                    </a>
+                <a href="/admin/AccommodationMasters/view/6663">Roc Presidente</a>
+
+            </td>
+            <td class="wp30">
+                Kuba » Havana				</td>
+            <td class="wp10">
+                Hotel				</td>
+            <td class="wp10">
+                4.0				</td>
+            <td class="wp5">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="actions text-right w130">
+                <a class="btn btn-success btn-xs" href="/admin/LocalAccommodationRatings/edit/6663"><i class="material-icons">add_circle</i>&nbsp;Přidat</a>&nbsp;<div class="btn-group"><a role="button" class="btn btn-outline-secondary btn-xs dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a><ul class="dropdown-menu pull-right" role="menu"><li><a target="_blank" href="/Searchmasks/master/6663"><i class="material-icons">link</i>&nbsp;Odkaz na veřejný web</a></li></ul></div>&nbsp;				</td>
+        </tr>
+                    <tr>
+            <td class="wp5">
+                6669				</td>
+            <td class="wp15">
+                <a href="/admin/AccommodationMasters/view/6669">Paradisus Playa Conchal</a>
+
+            </td>
+            <td class="wp30">
+                Kostarika » Playa Conchal				</td>
+            <td class="wp10">
+                Hotel				</td>
+            <td class="wp10">
+                5.0				</td>
+            <td class="wp5">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="actions text-right w130">
+                <a class="btn btn-success btn-xs" href="/admin/LocalAccommodationRatings/edit/6669"><i class="material-icons">add_circle</i>&nbsp;Přidat</a>&nbsp;<div class="btn-group"><a role="button" class="btn btn-outline-secondary btn-xs dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a><ul class="dropdown-menu pull-right" role="menu"><li><a target="_blank" href="/Searchmasks/master/6669"><i class="material-icons">link</i>&nbsp;Odkaz na veřejný web</a></li></ul></div>&nbsp;				</td>
+        </tr>
+                    <tr>
+            <td class="wp5">
+                6676				</td>
+            <td class="wp15">
+                                        <a href="https://i.ccdn.cz/acm/289/390901/l0.jpg" data-fancybox="AccommodationImage" class="colorbox" rel="colorbox-6676" title="Paradisus Princesa del Mar">
+                        <i class="material-icons">image</i>
+                    </a>
+                <a href="/admin/AccommodationMasters/view/6676">Paradisus Princesa del Mar</a>
+
+            </td>
+            <td class="wp30">
+                Kuba » Varadero				</td>
+            <td class="wp10">
+                Hotel				</td>
+            <td class="wp10">
+                5.0				</td>
+            <td class="wp5">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="actions text-right w130">
+                <a class="btn btn-success btn-xs" href="/admin/LocalAccommodationRatings/edit/6676"><i class="material-icons">add_circle</i>&nbsp;Přidat</a>&nbsp;<div class="btn-group"><a role="button" class="btn btn-outline-secondary btn-xs dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a><ul class="dropdown-menu pull-right" role="menu"><li><a target="_blank" href="/Searchmasks/master/6676"><i class="material-icons">link</i>&nbsp;Odkaz na veřejný web</a></li></ul></div>&nbsp;				</td>
+        </tr>
+                    <tr>
+            <td class="wp5">
+                6700				</td>
+            <td class="wp15">
+                <a href="/admin/AccommodationMasters/view/6700">La Playa Beach Resort</a>
+
+            </td>
+            <td class="wp30">
+                Spojené státy americké » Jih Spojených států » Florida				</td>
+            <td class="wp10">
+                Hotel				</td>
+            <td class="wp10">
+                5.0				</td>
+            <td class="wp5">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="actions text-right w130">
+                <a class="btn btn-success btn-xs" href="/admin/LocalAccommodationRatings/edit/6700"><i class="material-icons">add_circle</i>&nbsp;Přidat</a>&nbsp;<div class="btn-group"><a role="button" class="btn btn-outline-secondary btn-xs dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a><ul class="dropdown-menu pull-right" role="menu"><li><a target="_blank" href="/Searchmasks/master/6700"><i class="material-icons">link</i>&nbsp;Odkaz na veřejný web</a></li></ul></div>&nbsp;				</td>
+        </tr>
+                    <tr>
+            <td class="wp5">
+                6720				</td>
+            <td class="wp15">
+                                        <a href="https://i.ccdn.cz/acm/232/803185/l0.jpg" data-fancybox="AccommodationImage" class="colorbox" rel="colorbox-6720" title="Occidental at Xcaret Destination">
+                        <i class="material-icons">image</i>
+                    </a>
+                <a href="/admin/AccommodationMasters/view/6720">Occidental at Xcaret Destination</a>
+
+            </td>
+            <td class="wp30">
+                Mexiko » Riviera Maya				</td>
+            <td class="wp10">
+                Hotel				</td>
+            <td class="wp10">
+                5.0				</td>
+            <td class="wp5">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="actions text-right w130">
+                <a class="btn btn-success btn-xs" href="/admin/LocalAccommodationRatings/edit/6720"><i class="material-icons">add_circle</i>&nbsp;Přidat</a>&nbsp;<div class="btn-group"><a role="button" class="btn btn-outline-secondary btn-xs dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a><ul class="dropdown-menu pull-right" role="menu"><li><a target="_blank" href="/Searchmasks/master/6720"><i class="material-icons">link</i>&nbsp;Odkaz na veřejný web</a></li></ul></div>&nbsp;				</td>
+        </tr>
+                    <tr>
+            <td class="wp5">
+                6722				</td>
+            <td class="wp15">
+                                        <a href="https://i.ccdn.cz/acm/11/889679/l0.jpg" data-fancybox="AccommodationImage" class="colorbox" rel="colorbox-6722" title="The Reef Playacar">
+                        <i class="material-icons">image</i>
+                    </a>
+                <a href="/admin/AccommodationMasters/view/6722">The Reef Playacar</a>
+
+            </td>
+            <td class="wp30">
+                Mexiko » Playa del Carmen				</td>
+            <td class="wp10">
+                Hotel				</td>
+            <td class="wp10">
+                4.0				</td>
+            <td class="wp5">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="actions text-right w130">
+                <a class="btn btn-success btn-xs" href="/admin/LocalAccommodationRatings/edit/6722"><i class="material-icons">add_circle</i>&nbsp;Přidat</a>&nbsp;<div class="btn-group"><a role="button" class="btn btn-outline-secondary btn-xs dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a><ul class="dropdown-menu pull-right" role="menu"><li><a target="_blank" href="/Searchmasks/master/6722"><i class="material-icons">link</i>&nbsp;Odkaz na veřejný web</a></li></ul></div>&nbsp;				</td>
+        </tr>
+                    <tr>
+            <td class="wp5">
+                6723				</td>
+            <td class="wp15">
+                <a href="/admin/AccommodationMasters/view/6723">Oasis Viva</a>
+
+            </td>
+            <td class="wp30">
+                Mexiko » Cancún				</td>
+            <td class="wp10">
+                Hotel				</td>
+            <td class="wp10">
+                4.0				</td>
+            <td class="wp5">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="actions text-right w130">
+                <a class="btn btn-success btn-xs" href="/admin/LocalAccommodationRatings/edit/6723"><i class="material-icons">add_circle</i>&nbsp;Přidat</a>&nbsp;<div class="btn-group"><a role="button" class="btn btn-outline-secondary btn-xs dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a><ul class="dropdown-menu pull-right" role="menu"><li><a target="_blank" href="/Searchmasks/master/6723"><i class="material-icons">link</i>&nbsp;Odkaz na veřejný web</a></li></ul></div>&nbsp;				</td>
+        </tr>
+                    <tr>
+            <td class="wp5">
+                6730				</td>
+            <td class="wp15">
+                                        <a href="https://i.ccdn.cz/acm/232/803257/l0.jpg" data-fancybox="AccommodationImage" class="colorbox" rel="colorbox-6730" title="Occidental Cozumel">
+                        <i class="material-icons">image</i>
+                    </a>
+                <a href="/admin/AccommodationMasters/view/6730">Occidental Cozumel</a><p>ex: Occidental Grand Cozumel
+
+            </p></td>
+            <td class="wp30">
+                Mexiko » ostrov Cozumel				</td>
+            <td class="wp10">
+                Hotel				</td>
+            <td class="wp10">
+                5.0				</td>
+            <td class="wp5">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="actions text-right w130">
+                <a class="btn btn-success btn-xs" href="/admin/LocalAccommodationRatings/edit/6730"><i class="material-icons">add_circle</i>&nbsp;Přidat</a>&nbsp;<div class="btn-group"><a role="button" class="btn btn-outline-secondary btn-xs dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a><ul class="dropdown-menu pull-right" role="menu"><li><a target="_blank" href="/Searchmasks/master/6730"><i class="material-icons">link</i>&nbsp;Odkaz na veřejný web</a></li></ul></div>&nbsp;				</td>
+        </tr>
+                    <tr>
+            <td class="wp5">
+                6740				</td>
+            <td class="wp15">
+                <a href="/admin/AccommodationMasters/view/6740">Almond Beach Village</a>
+
+            </td>
+            <td class="wp30">
+                Barbados				</td>
+            <td class="wp10">
+                Hotel				</td>
+            <td class="wp10">
+                4.0				</td>
+            <td class="wp5">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="actions text-right w130">
+                <a class="btn btn-success btn-xs" href="/admin/LocalAccommodationRatings/edit/6740"><i class="material-icons">add_circle</i>&nbsp;Přidat</a>&nbsp;<div class="btn-group"><a role="button" class="btn btn-outline-secondary btn-xs dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a><ul class="dropdown-menu pull-right" role="menu"><li><a target="_blank" href="/Searchmasks/master/6740"><i class="material-icons">link</i>&nbsp;Odkaz na veřejný web</a></li></ul></div>&nbsp;				</td>
+        </tr>
+                    <tr>
+            <td class="wp5">
+                6747				</td>
+            <td class="wp15">
+                                        <a href="https://i.ccdn.cz/acm/57/804920/l0.jpg" data-fancybox="AccommodationImage" class="colorbox" rel="colorbox-6747" title="Bucuti &amp; Tara Beach Resort">
+                        <i class="material-icons">image</i>
+                    </a>
+                <a href="/admin/AccommodationMasters/view/6747">Bucuti &amp; Tara Beach Resort</a>
+
+            </td>
+            <td class="wp30">
+                Aruba				</td>
+            <td class="wp10">
+                Hotel				</td>
+            <td class="wp10">
+                4.0				</td>
+            <td class="wp5">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="actions text-right w130">
+                <a class="btn btn-success btn-xs" href="/admin/LocalAccommodationRatings/edit/6747"><i class="material-icons">add_circle</i>&nbsp;Přidat</a>&nbsp;<div class="btn-group"><a role="button" class="btn btn-outline-secondary btn-xs dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a><ul class="dropdown-menu pull-right" role="menu"><li><a target="_blank" href="/Searchmasks/master/6747"><i class="material-icons">link</i>&nbsp;Odkaz na veřejný web</a></li></ul></div>&nbsp;				</td>
+        </tr>
+                    <tr>
+            <td class="wp5">
+                6748				</td>
+            <td class="wp15">
+                                        <a href="https://i.ccdn.cz/acm/57/804919/l0.jpg" data-fancybox="AccommodationImage" class="colorbox" rel="colorbox-6748" title="Manchebo Beach Resort &amp; Spa">
+                        <i class="material-icons">image</i>
+                    </a>
+                <a href="/admin/AccommodationMasters/view/6748">Manchebo Beach Resort &amp; Spa</a>
+
+            </td>
+            <td class="wp30">
+                Aruba				</td>
+            <td class="wp10">
+                Hotel				</td>
+            <td class="wp10">
+                4.0				</td>
+            <td class="wp5">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="actions text-right w130">
+                <a class="btn btn-success btn-xs" href="/admin/LocalAccommodationRatings/edit/6748"><i class="material-icons">add_circle</i>&nbsp;Přidat</a>&nbsp;<div class="btn-group"><a role="button" class="btn btn-outline-secondary btn-xs dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a><ul class="dropdown-menu pull-right" role="menu"><li><a target="_blank" href="/Searchmasks/master/6748"><i class="material-icons">link</i>&nbsp;Odkaz na veřejný web</a></li></ul></div>&nbsp;				</td>
+        </tr>
+                    <tr>
+            <td class="wp5">
+                6749				</td>
+            <td class="wp15">
+                                        <a href="https://i.ccdn.cz/acm/11/873012/l0.jpg" data-fancybox="AccommodationImage" class="colorbox" rel="colorbox-6749" title="Barcelo Aruba">
+                        <i class="material-icons">image</i>
+                    </a>
+                <a href="/admin/AccommodationMasters/view/6749">Barcelo Aruba</a>
+
+            </td>
+            <td class="wp30">
+                Aruba				</td>
+            <td class="wp10">
+                Hotel				</td>
+            <td class="wp10">
+                5.0				</td>
+            <td class="wp5">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="actions text-right w130">
+                <a class="btn btn-success btn-xs" href="/admin/LocalAccommodationRatings/edit/6749"><i class="material-icons">add_circle</i>&nbsp;Přidat</a>&nbsp;<div class="btn-group"><a role="button" class="btn btn-outline-secondary btn-xs dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a><ul class="dropdown-menu pull-right" role="menu"><li><a target="_blank" href="/Searchmasks/master/6749"><i class="material-icons">link</i>&nbsp;Odkaz na veřejný web</a></li></ul></div>&nbsp;				</td>
+        </tr>
+                    <tr>
+            <td class="wp5">
+                6765				</td>
+            <td class="wp15">
+                <a href="/admin/AccommodationMasters/view/6765">Sunrise Nha Trang Beach Hotel &amp; Spa</a>
+
+            </td>
+            <td class="wp30">
+                Vietnam » Nha trang				</td>
+            <td class="wp10">
+                Hotel				</td>
+            <td class="wp10">
+                4.0				</td>
+            <td class="wp5">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="actions text-right w130">
+                <a class="btn btn-success btn-xs" href="/admin/LocalAccommodationRatings/edit/6765"><i class="material-icons">add_circle</i>&nbsp;Přidat</a>&nbsp;<div class="btn-group"><a role="button" class="btn btn-outline-secondary btn-xs dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a><ul class="dropdown-menu pull-right" role="menu"><li><a target="_blank" href="/Searchmasks/master/6765"><i class="material-icons">link</i>&nbsp;Odkaz na veřejný web</a></li></ul></div>&nbsp;				</td>
+        </tr>
+                    <tr>
+            <td class="wp5">
+                6772				</td>
+            <td class="wp15">
+                <a href="/admin/AccommodationMasters/view/6772">Victoria Hoi An Beach Resort &amp; Spa</a>
+
+            </td>
+            <td class="wp30">
+                Vietnam » Hoian				</td>
+            <td class="wp10">
+                Hotel				</td>
+            <td class="wp10">
+                4.0				</td>
+            <td class="wp5">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="actions text-right w130">
+                <a class="btn btn-success btn-xs" href="/admin/LocalAccommodationRatings/edit/6772"><i class="material-icons">add_circle</i>&nbsp;Přidat</a>&nbsp;<div class="btn-group"><a role="button" class="btn btn-outline-secondary btn-xs dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a><ul class="dropdown-menu pull-right" role="menu"><li><a target="_blank" href="/Searchmasks/master/6772"><i class="material-icons">link</i>&nbsp;Odkaz na veřejný web</a></li></ul></div>&nbsp;				</td>
+        </tr>
+                    <tr>
+            <td class="wp5">
+                6776				</td>
+            <td class="wp15">
+                <a href="/admin/AccommodationMasters/view/6776">Belmond Copacabana Palace</a>
+
+            </td>
+            <td class="wp30">
+                Brazílie » Rio de Janeiro				</td>
+            <td class="wp10">
+                Hotel				</td>
+            <td class="wp10">
+                5.0				</td>
+            <td class="wp5">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="actions text-right w130">
+                <a class="btn btn-success btn-xs" href="/admin/LocalAccommodationRatings/edit/6776"><i class="material-icons">add_circle</i>&nbsp;Přidat</a>&nbsp;<div class="btn-group"><a role="button" class="btn btn-outline-secondary btn-xs dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a><ul class="dropdown-menu pull-right" role="menu"><li><a target="_blank" href="/Searchmasks/master/6776"><i class="material-icons">link</i>&nbsp;Odkaz na veřejný web</a></li></ul></div>&nbsp;				</td>
+        </tr>
+                    <tr>
+            <td class="wp5">
+                6808				</td>
+            <td class="wp15">
+                <a href="/admin/AccommodationMasters/view/6808">Bahia Principe Grand Cayacoa</a><p>ex: Gran Bahia Principe Cayacoa
+
+            </p></td>
+            <td class="wp30">
+                Dominikánská republika » poloostrov Samana				</td>
+            <td class="wp10">
+                Hotel				</td>
+            <td class="wp10">
+                5.0				</td>
+            <td class="wp5">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="actions text-right w130">
+                <a class="btn btn-success btn-xs" href="/admin/LocalAccommodationRatings/edit/6808"><i class="material-icons">add_circle</i>&nbsp;Přidat</a>&nbsp;<div class="btn-group"><a role="button" class="btn btn-outline-secondary btn-xs dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a><ul class="dropdown-menu pull-right" role="menu"><li><a target="_blank" href="/Searchmasks/master/6808"><i class="material-icons">link</i>&nbsp;Odkaz na veřejný web</a></li></ul></div>&nbsp;				</td>
+        </tr>
+                    <tr>
+            <td class="wp5">
+                6823				</td>
+            <td class="wp15">
+                                        <a href="https://i.ccdn.cz/acm/11/587389/l0.jpg" data-fancybox="AccommodationImage" class="colorbox" rel="colorbox-6823" title="Occidental Caribe">
+                        <i class="material-icons">image</i>
+                    </a>
+                <a href="/admin/AccommodationMasters/view/6823">Occidental Caribe</a> <small>(léto)</small>
+
+            </td>
+            <td class="wp30">
+                Dominikánská republika » Punta Cana » Bávaro				</td>
+            <td class="wp10">
+                Hotel				</td>
+            <td class="wp10">
+                4.0				</td>
+            <td class="wp5">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="actions text-right w130">
+                <a class="btn btn-success btn-xs" href="/admin/LocalAccommodationRatings/edit/6823"><i class="material-icons">add_circle</i>&nbsp;Přidat</a>&nbsp;<div class="btn-group"><a role="button" class="btn btn-outline-secondary btn-xs dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a><ul class="dropdown-menu pull-right" role="menu"><li><a target="_blank" href="/Searchmasks/master/6823"><i class="material-icons">link</i>&nbsp;Odkaz na veřejný web</a></li></ul></div>&nbsp;				</td>
+        </tr>
+                    <tr>
+            <td class="wp5">
+                6824				</td>
+            <td class="wp15">
+                <a href="/admin/AccommodationMasters/view/6824">Carabela Bavaro hotel</a>
+
+            </td>
+            <td class="wp30">
+                Dominikánská republika » Punta Cana				</td>
+            <td class="wp10">
+                Hotel				</td>
+            <td class="wp10">
+                3.5				</td>
+            <td class="wp5">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="actions text-right w130">
+                <a class="btn btn-success btn-xs" href="/admin/LocalAccommodationRatings/edit/6824"><i class="material-icons">add_circle</i>&nbsp;Přidat</a>&nbsp;<div class="btn-group"><a role="button" class="btn btn-outline-secondary btn-xs dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a><ul class="dropdown-menu pull-right" role="menu"><li><a target="_blank" href="/Searchmasks/master/6824"><i class="material-icons">link</i>&nbsp;Odkaz na veřejný web</a></li></ul></div>&nbsp;				</td>
+        </tr>
+                    <tr>
+            <td class="wp5">
+                6827				</td>
+            <td class="wp15">
+                                        <a href="https://i.ccdn.cz/acm/59/861265/l0.jpg" data-fancybox="AccommodationImage" class="colorbox" rel="colorbox-6827" title="Sunscape Coco Punta Cana">
+                        <i class="material-icons">image</i>
+                    </a>
+                <a href="/admin/AccommodationMasters/view/6827">Sunscape Coco Punta Cana</a><p>ex: Be Live Collection Punta Cana
+
+            </p></td>
+            <td class="wp30">
+                Dominikánská republika » Punta Cana				</td>
+            <td class="wp10">
+                Hotel				</td>
+            <td class="wp10">
+                5.0				</td>
+            <td class="wp5">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="actions text-right w130">
+                <a class="btn btn-success btn-xs" href="/admin/LocalAccommodationRatings/edit/6827"><i class="material-icons">add_circle</i>&nbsp;Přidat</a>&nbsp;<div class="btn-group"><a role="button" class="btn btn-outline-secondary btn-xs dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a><ul class="dropdown-menu pull-right" role="menu"><li><a target="_blank" href="/Searchmasks/master/6827"><i class="material-icons">link</i>&nbsp;Odkaz na veřejný web</a></li></ul></div>&nbsp;				</td>
+        </tr>
+                    <tr>
+            <td class="wp5">
+                6829				</td>
+            <td class="wp15">
+                                        <a href="https://i.ccdn.cz/acm/484/857857/l0.jpg" data-fancybox="AccommodationImage" class="colorbox" rel="colorbox-6829" title="Grand Bavaro Princess">
+                        <i class="material-icons">image</i>
+                    </a>
+                <a href="/admin/AccommodationMasters/view/6829">Grand Bavaro Princess</a><p>ex: Bavaro Princess
+
+            </p></td>
+            <td class="wp30">
+                Dominikánská republika » Punta Cana » Bávaro				</td>
+            <td class="wp10">
+                Hotel				</td>
+            <td class="wp10">
+                5.0				</td>
+            <td class="wp5">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="actions text-right w130">
+                <a class="btn btn-success btn-xs" href="/admin/LocalAccommodationRatings/edit/6829"><i class="material-icons">add_circle</i>&nbsp;Přidat</a>&nbsp;<div class="btn-group"><a role="button" class="btn btn-outline-secondary btn-xs dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a><ul class="dropdown-menu pull-right" role="menu"><li><a target="_blank" href="/Searchmasks/master/6829"><i class="material-icons">link</i>&nbsp;Odkaz na veřejný web</a></li></ul></div>&nbsp;				</td>
+        </tr>
+                    <tr>
+            <td class="wp5">
+                6832				</td>
+            <td class="wp15">
+                                        <a href="https://i.ccdn.cz/acm/484/857329/l0.jpg" data-fancybox="AccommodationImage" class="colorbox" rel="colorbox-6832" title="Paradisus Palma Real">
+                        <i class="material-icons">image</i>
+                    </a>
+                <a href="/admin/AccommodationMasters/view/6832">Paradisus Palma Real</a>
+
+            </td>
+            <td class="wp30">
+                Dominikánská republika » Punta Cana » Bávaro				</td>
+            <td class="wp10">
+                Hotel				</td>
+            <td class="wp10">
+                5.0				</td>
+            <td class="wp5">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="actions text-right w130">
+                <a class="btn btn-success btn-xs" href="/admin/LocalAccommodationRatings/edit/6832"><i class="material-icons">add_circle</i>&nbsp;Přidat</a>&nbsp;<div class="btn-group"><a role="button" class="btn btn-outline-secondary btn-xs dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a><ul class="dropdown-menu pull-right" role="menu"><li><a target="_blank" href="/Searchmasks/master/6832"><i class="material-icons">link</i>&nbsp;Odkaz na veřejný web</a></li></ul></div>&nbsp;				</td>
+        </tr>
+                    <tr>
+            <td class="wp5">
+                6835				</td>
+            <td class="wp15">
+                                        <a href="https://i.ccdn.cz/acm/232/802812/l0.jpg" data-fancybox="AccommodationImage" class="colorbox" rel="colorbox-6835" title="VIK Hotel Arena Blanca">
+                        <i class="material-icons">image</i>
+                    </a>
+                <a href="/admin/AccommodationMasters/view/6835">VIK Hotel Arena Blanca</a> <small>(léto)</small>
+
+            </td>
+            <td class="wp30">
+                Dominikánská republika » Punta Cana » Bávaro				</td>
+            <td class="wp10">
+                Hotel				</td>
+            <td class="wp10">
+                4.0				</td>
+            <td class="wp5">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="actions text-right w130">
+                <a class="btn btn-success btn-xs" href="/admin/LocalAccommodationRatings/edit/6835"><i class="material-icons">add_circle</i>&nbsp;Přidat</a>&nbsp;<div class="btn-group"><a role="button" class="btn btn-outline-secondary btn-xs dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a><ul class="dropdown-menu pull-right" role="menu"><li><a target="_blank" href="/Searchmasks/master/6835"><i class="material-icons">link</i>&nbsp;Odkaz na veřejný web</a></li></ul></div>&nbsp;				</td>
+        </tr>
+                    <tr>
+            <td class="wp5">
+                6838				</td>
+            <td class="wp15">
+                                        <a href="https://i.ccdn.cz/acm/232/802784/l0.jpg" data-fancybox="AccommodationImage" class="colorbox" rel="colorbox-6838" title="Whala Boca Chica">
+                        <i class="material-icons">image</i>
+                    </a>
+                <a href="/admin/AccommodationMasters/view/6838">Whala Boca Chica</a>
+
+            </td>
+            <td class="wp30">
+                Dominikánská republika » Boca Chica				</td>
+            <td class="wp10">
+                Hotel				</td>
+            <td class="wp10">
+                3.0				</td>
+            <td class="wp5">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="actions text-right w130">
+                <a class="btn btn-success btn-xs" href="/admin/LocalAccommodationRatings/edit/6838"><i class="material-icons">add_circle</i>&nbsp;Přidat</a>&nbsp;<div class="btn-group"><a role="button" class="btn btn-outline-secondary btn-xs dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a><ul class="dropdown-menu pull-right" role="menu"><li><a target="_blank" href="/Searchmasks/master/6838"><i class="material-icons">link</i>&nbsp;Odkaz na veřejný web</a></li></ul></div>&nbsp;				</td>
+        </tr>
+                    <tr>
+            <td class="wp5">
+                6839				</td>
+            <td class="wp15">
+                <a href="/admin/AccommodationMasters/view/6839">Barcelo Capella Beach Resort</a>
+
+            </td>
+            <td class="wp30">
+                Dominikánská republika » Juan Dolio				</td>
+            <td class="wp10">
+                Hotel				</td>
+            <td class="wp10">
+                4.0				</td>
+            <td class="wp5">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="actions text-right w130">
+                <a class="btn btn-success btn-xs" href="/admin/LocalAccommodationRatings/edit/6839"><i class="material-icons">add_circle</i>&nbsp;Přidat</a>&nbsp;<div class="btn-group"><a role="button" class="btn btn-outline-secondary btn-xs dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a><ul class="dropdown-menu pull-right" role="menu"><li><a target="_blank" href="/Searchmasks/master/6839"><i class="material-icons">link</i>&nbsp;Odkaz na veřejný web</a></li></ul></div>&nbsp;				</td>
+        </tr>
+                    <tr>
+            <td class="wp5">
+                6840				</td>
+            <td class="wp15">
+                                        <a href="https://i.ccdn.cz/acm/232/802786/l0.jpg" data-fancybox="AccommodationImage" class="colorbox" rel="colorbox-6840" title="Coral Costa Caribe">
+                        <i class="material-icons">image</i>
+                    </a>
+                <a href="/admin/AccommodationMasters/view/6840">Coral Costa Caribe</a>
+
+            </td>
+            <td class="wp30">
+                Dominikánská republika » Juan Dolio				</td>
+            <td class="wp10">
+                Hotel				</td>
+            <td class="wp10">
+                3.0				</td>
+            <td class="wp5">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="actions text-right w130">
+                <a class="btn btn-success btn-xs" href="/admin/LocalAccommodationRatings/edit/6840"><i class="material-icons">add_circle</i>&nbsp;Přidat</a>&nbsp;<div class="btn-group"><a role="button" class="btn btn-outline-secondary btn-xs dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a><ul class="dropdown-menu pull-right" role="menu"><li><a target="_blank" href="/Searchmasks/master/6840"><i class="material-icons">link</i>&nbsp;Odkaz na veřejný web</a></li></ul></div>&nbsp;				</td>
+        </tr>
+                    <tr>
+            <td class="wp5">
+                6841				</td>
+            <td class="wp15">
+                <a href="/admin/AccommodationMasters/view/6841">Be Live Hamaca</a>
+
+            </td>
+            <td class="wp30">
+                Dominikánská republika » Boca Chica				</td>
+            <td class="wp10">
+                Hotel				</td>
+            <td class="wp10">
+                4.0				</td>
+            <td class="wp5">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="actions text-right w130">
+                <a class="btn btn-success btn-xs" href="/admin/LocalAccommodationRatings/edit/6841"><i class="material-icons">add_circle</i>&nbsp;Přidat</a>&nbsp;<div class="btn-group"><a role="button" class="btn btn-outline-secondary btn-xs dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a><ul class="dropdown-menu pull-right" role="menu"><li><a target="_blank" href="/Searchmasks/master/6841"><i class="material-icons">link</i>&nbsp;Odkaz na veřejný web</a></li></ul></div>&nbsp;				</td>
+        </tr>
+                    <tr>
+            <td class="wp5">
+                6843				</td>
+            <td class="wp15">
+                                        <a href="https://i.ccdn.cz/acm/484/890411/l0.jpg" data-fancybox="AccommodationImage" class="colorbox" rel="colorbox-6843" title="Hilton La Romana">
+                        <i class="material-icons">image</i>
+                    </a>
+                <a href="/admin/AccommodationMasters/view/6843">Hilton La Romana</a> <small>(léto)</small><p>ex: Dreams La Romana
+
+            </p></td>
+            <td class="wp30">
+                Dominikánská republika » Bayahibe				</td>
+            <td class="wp10">
+                Hotel				</td>
+            <td class="wp10">
+                5.0				</td>
+            <td class="wp5">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="actions text-right w130">
+                <a class="btn btn-success btn-xs" href="/admin/LocalAccommodationRatings/edit/6843"><i class="material-icons">add_circle</i>&nbsp;Přidat</a>&nbsp;<div class="btn-group"><a role="button" class="btn btn-outline-secondary btn-xs dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a><ul class="dropdown-menu pull-right" role="menu"><li><a target="_blank" href="/Searchmasks/master/6843"><i class="material-icons">link</i>&nbsp;Odkaz na veřejný web</a></li></ul></div>&nbsp;				</td>
+        </tr>
+                    <tr>
+            <td class="wp5">
+                6844				</td>
+            <td class="wp15">
+                                        <a href="https://i.ccdn.cz/acm/484/857393/l0.jpg" data-fancybox="AccommodationImage" class="colorbox" rel="colorbox-6844" title="Bahia Principe Grand La Romana">
+                        <i class="material-icons">image</i>
+                    </a>
+                <a href="/admin/AccommodationMasters/view/6844">Bahia Principe Grand La Romana</a> <small>(léto)</small><p>ex: Grand Bahia Príncipe La Romana
+
+            </p></td>
+            <td class="wp30">
+                Dominikánská republika » La Romana				</td>
+            <td class="wp10">
+                Hotel				</td>
+            <td class="wp10">
+                5.0				</td>
+            <td class="wp5">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="actions text-right w130">
+                <a class="btn btn-success btn-xs" href="/admin/LocalAccommodationRatings/edit/6844"><i class="material-icons">add_circle</i>&nbsp;Přidat</a>&nbsp;<div class="btn-group"><a role="button" class="btn btn-outline-secondary btn-xs dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a><ul class="dropdown-menu pull-right" role="menu"><li><a target="_blank" href="/Searchmasks/master/6844"><i class="material-icons">link</i>&nbsp;Odkaz na veřejný web</a></li></ul></div>&nbsp;				</td>
+        </tr>
+                    <tr>
+            <td class="wp5">
+                6846				</td>
+            <td class="wp15">
+                                        <a href="https://i.ccdn.cz/acm/11/889604/l0.jpg" data-fancybox="AccommodationImage" class="colorbox" rel="colorbox-6846" title="Sunscape Dominicus La Romana">
+                        <i class="material-icons">image</i>
+                    </a>
+                <a href="/admin/AccommodationMasters/view/6846">Sunscape Dominicus La Romana</a> <small>(léto)</small><p>ex: Be Live Collection Canoa
+
+            </p></td>
+            <td class="wp30">
+                Dominikánská republika » Bayahibe				</td>
+            <td class="wp10">
+                Hotel				</td>
+            <td class="wp10">
+                4.0				</td>
+            <td class="wp5">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="actions text-right w130">
+                <a class="btn btn-success btn-xs" href="/admin/LocalAccommodationRatings/edit/6846"><i class="material-icons">add_circle</i>&nbsp;Přidat</a>&nbsp;<div class="btn-group"><a role="button" class="btn btn-outline-secondary btn-xs dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a><ul class="dropdown-menu pull-right" role="menu"><li><a target="_blank" href="/Searchmasks/master/6846"><i class="material-icons">link</i>&nbsp;Odkaz na veřejný web</a></li></ul></div>&nbsp;				</td>
+        </tr>
+                    <tr>
+            <td class="wp5">
+                6848				</td>
+            <td class="wp15">
+                <a href="/admin/AccommodationMasters/view/6848">Olenka Sunside Beach</a>
+
+            </td>
+            <td class="wp30">
+                Srí Lanka » Marawila				</td>
+            <td class="wp10">
+                Hotel				</td>
+            <td class="wp10">
+                2.0				</td>
+            <td class="wp5">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="actions text-right w130">
+                <a class="btn btn-success btn-xs" href="/admin/LocalAccommodationRatings/edit/6848"><i class="material-icons">add_circle</i>&nbsp;Přidat</a>&nbsp;<div class="btn-group"><a role="button" class="btn btn-outline-secondary btn-xs dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a><ul class="dropdown-menu pull-right" role="menu"><li><a target="_blank" href="/Searchmasks/master/6848"><i class="material-icons">link</i>&nbsp;Odkaz na veřejný web</a></li></ul></div>&nbsp;				</td>
+        </tr>
+                    <tr>
+            <td class="wp5">
+                6849				</td>
+            <td class="wp15">
+                                        <a href="https://i.ccdn.cz/acm/484/884400/l0.jpg" data-fancybox="AccommodationImage" class="colorbox" rel="colorbox-6849" title="Bentota Beach by Cinnamon">
+                        <i class="material-icons">image</i>
+                    </a>
+                <a href="/admin/AccommodationMasters/view/6849">Bentota Beach by Cinnamon</a>
+
+            </td>
+            <td class="wp30">
+                Srí Lanka » Bentota				</td>
+            <td class="wp10">
+                Hotel				</td>
+            <td class="wp10">
+                4.0				</td>
+            <td class="wp5">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="actions text-right w130">
+                <a class="btn btn-success btn-xs" href="/admin/LocalAccommodationRatings/edit/6849"><i class="material-icons">add_circle</i>&nbsp;Přidat</a>&nbsp;<div class="btn-group"><a role="button" class="btn btn-outline-secondary btn-xs dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a><ul class="dropdown-menu pull-right" role="menu"><li><a target="_blank" href="/Searchmasks/master/6849"><i class="material-icons">link</i>&nbsp;Odkaz na veřejný web</a></li></ul></div>&nbsp;				</td>
+        </tr>
+                    <tr>
+            <td class="wp5">
+                6851				</td>
+            <td class="wp15">
+                                        <a href="https://i.ccdn.cz/acm/289/505406/l0.jpg" data-fancybox="AccommodationImage" class="colorbox" rel="colorbox-6851" title="Dickwella Resort &amp; Spa">
+                        <i class="material-icons">image</i>
+                    </a>
+                <a href="/admin/AccommodationMasters/view/6851">Dickwella Resort &amp; Spa</a>
+
+            </td>
+            <td class="wp30">
+                Srí Lanka				</td>
+            <td class="wp10">
+                Hotel				</td>
+            <td class="wp10">
+                3.0				</td>
+            <td class="wp5">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="actions text-right w130">
+                <a class="btn btn-success btn-xs" href="/admin/LocalAccommodationRatings/edit/6851"><i class="material-icons">add_circle</i>&nbsp;Přidat</a>&nbsp;<div class="btn-group"><a role="button" class="btn btn-outline-secondary btn-xs dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a><ul class="dropdown-menu pull-right" role="menu"><li><a target="_blank" href="/Searchmasks/master/6851"><i class="material-icons">link</i>&nbsp;Odkaz na veřejný web</a></li></ul></div>&nbsp;				</td>
+        </tr>
+                    <tr>
+            <td class="wp5">
+                6852				</td>
+            <td class="wp15">
+                <a href="/admin/AccommodationMasters/view/6852">Sanmali Beach hotel</a>
+
+            </td>
+            <td class="wp30">
+                Srí Lanka » Marawila				</td>
+            <td class="wp10">
+                -				</td>
+            <td class="wp10">
+                2.0				</td>
+            <td class="wp5">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="actions text-right w130">
+                <a class="btn btn-success btn-xs" href="/admin/LocalAccommodationRatings/edit/6852"><i class="material-icons">add_circle</i>&nbsp;Přidat</a>&nbsp;<div class="btn-group"><a role="button" class="btn btn-outline-secondary btn-xs dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a><ul class="dropdown-menu pull-right" role="menu"><li><a target="_blank" href="/Searchmasks/master/6852"><i class="material-icons">link</i>&nbsp;Odkaz na veřejný web</a></li></ul></div>&nbsp;				</td>
+        </tr>
+                    <tr>
+            <td class="wp5">
+                6853				</td>
+            <td class="wp15">
+                                        <a href="https://i.ccdn.cz/acm/289/390267/l0.jpg" data-fancybox="AccommodationImage" class="colorbox" rel="colorbox-6853" title="Camelot Beach">
+                        <i class="material-icons">image</i>
+                    </a>
+                <a href="/admin/AccommodationMasters/view/6853">Camelot Beach</a>
+
+            </td>
+            <td class="wp30">
+                Srí Lanka » Negombo				</td>
+            <td class="wp10">
+                Hotel				</td>
+            <td class="wp10">
+                3.0				</td>
+            <td class="wp5">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="actions text-right w130">
+                <a class="btn btn-success btn-xs" href="/admin/LocalAccommodationRatings/edit/6853"><i class="material-icons">add_circle</i>&nbsp;Přidat</a>&nbsp;<div class="btn-group"><a role="button" class="btn btn-outline-secondary btn-xs dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a><ul class="dropdown-menu pull-right" role="menu"><li><a target="_blank" href="/Searchmasks/master/6853"><i class="material-icons">link</i>&nbsp;Odkaz na veřejný web</a></li></ul></div>&nbsp;				</td>
+        </tr>
+                    <tr>
+            <td class="wp5">
+                6854				</td>
+            <td class="wp15">
+                                        <a href="https://i.ccdn.cz/acm/58/885523/l0.jpg" data-fancybox="AccommodationImage" class="colorbox" rel="colorbox-6854" title="Occidental Eden Beruwela">
+                        <i class="material-icons">image</i>
+                    </a>
+                <a href="/admin/AccommodationMasters/view/6854">Occidental Eden Beruwela</a><p>ex: Eden Resort &amp; Spa
+
+            </p></td>
+            <td class="wp30">
+                Srí Lanka » Beruwela				</td>
+            <td class="wp10">
+                Hotel				</td>
+            <td class="wp10">
+                5.0				</td>
+            <td class="wp5">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="actions text-right w130">
+                <a class="btn btn-success btn-xs" href="/admin/LocalAccommodationRatings/edit/6854"><i class="material-icons">add_circle</i>&nbsp;Přidat</a>&nbsp;<div class="btn-group"><a role="button" class="btn btn-outline-secondary btn-xs dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a><ul class="dropdown-menu pull-right" role="menu"><li><a target="_blank" href="/Searchmasks/master/6854"><i class="material-icons">link</i>&nbsp;Odkaz na veřejný web</a></li></ul></div>&nbsp;				</td>
+        </tr>
+                    <tr>
+            <td class="wp5">
+                6855				</td>
+            <td class="wp15">
+                <a href="/admin/AccommodationMasters/view/6855">Riverina</a>
+
+            </td>
+            <td class="wp30">
+                Srí Lanka » Beruwela				</td>
+            <td class="wp10">
+                Hotel				</td>
+            <td class="wp10">
+                4.0				</td>
+            <td class="wp5">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="actions text-right w130">
+                <a class="btn btn-success btn-xs" href="/admin/LocalAccommodationRatings/edit/6855"><i class="material-icons">add_circle</i>&nbsp;Přidat</a>&nbsp;<div class="btn-group"><a role="button" class="btn btn-outline-secondary btn-xs dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a><ul class="dropdown-menu pull-right" role="menu"><li><a target="_blank" href="/Searchmasks/master/6855"><i class="material-icons">link</i>&nbsp;Odkaz na veřejný web</a></li></ul></div>&nbsp;				</td>
+        </tr>
+                    <tr>
+            <td class="wp5">
+                6857				</td>
+            <td class="wp15">
+                                        <a href="https://i.ccdn.cz/acm/45/751989/l0.jpg" data-fancybox="AccommodationImage" class="colorbox" rel="colorbox-6857" title="Citrus Hikkaduwa">
+                        <i class="material-icons">image</i>
+                    </a>
+                <a href="/admin/AccommodationMasters/view/6857">Citrus Hikkaduwa</a>
+
+            </td>
+            <td class="wp30">
+                Srí Lanka » Hikkaduwa				</td>
+            <td class="wp10">
+                Hotel				</td>
+            <td class="wp10">
+                4.0				</td>
+            <td class="wp5">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="actions text-right w130">
+                <a class="btn btn-success btn-xs" href="/admin/LocalAccommodationRatings/edit/6857"><i class="material-icons">add_circle</i>&nbsp;Přidat</a>&nbsp;<div class="btn-group"><a role="button" class="btn btn-outline-secondary btn-xs dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a><ul class="dropdown-menu pull-right" role="menu"><li><a target="_blank" href="/Searchmasks/master/6857"><i class="material-icons">link</i>&nbsp;Odkaz na veřejný web</a></li></ul></div>&nbsp;				</td>
+        </tr>
+                    <tr>
+            <td class="wp5">
+                6858				</td>
+            <td class="wp15">
+                <a href="/admin/AccommodationMasters/view/6858">Královská cesta</a>
+
+            </td>
+            <td class="wp30">
+                Srí Lanka				</td>
+            <td class="wp10">
+                -				</td>
+            <td class="wp10">
+                0.0				</td>
+            <td class="wp5">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="actions text-right w130">
+                <a class="btn btn-success btn-xs" href="/admin/LocalAccommodationRatings/edit/6858"><i class="material-icons">add_circle</i>&nbsp;Přidat</a>&nbsp;<div class="btn-group"><a role="button" class="btn btn-outline-secondary btn-xs dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a><ul class="dropdown-menu pull-right" role="menu"><li><a target="_blank" href="/Searchmasks/master/6858"><i class="material-icons">link</i>&nbsp;Odkaz na veřejný web</a></li></ul></div>&nbsp;				</td>
+        </tr>
+                    <tr>
+            <td class="wp5">
+                6859				</td>
+            <td class="wp15">
+                <a href="/admin/AccommodationMasters/view/6859">Aditya Resort</a>
+
+            </td>
+            <td class="wp30">
+                Srí Lanka » Rathgama				</td>
+            <td class="wp10">
+                Hotel				</td>
+            <td class="wp10">
+                5.0				</td>
+            <td class="wp5">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="actions text-right w130">
+                <a class="btn btn-success btn-xs" href="/admin/LocalAccommodationRatings/edit/6859"><i class="material-icons">add_circle</i>&nbsp;Přidat</a>&nbsp;<div class="btn-group"><a role="button" class="btn btn-outline-secondary btn-xs dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a><ul class="dropdown-menu pull-right" role="menu"><li><a target="_blank" href="/Searchmasks/master/6859"><i class="material-icons">link</i>&nbsp;Odkaz na veřejný web</a></li></ul></div>&nbsp;				</td>
+        </tr>
+                    <tr>
+            <td class="wp5">
+                6860				</td>
+            <td class="wp15">
+                                        <a href="https://i.ccdn.cz/acm/15/889998/l0.jpg" data-fancybox="AccommodationImage" class="colorbox" rel="colorbox-6860" title="Royal Island Resort &amp; Spa">
+                        <i class="material-icons">image</i>
+                    </a>
+                <a href="/admin/AccommodationMasters/view/6860">Royal Island Resort &amp; Spa</a>
+
+            </td>
+            <td class="wp30">
+                Maledivy » Baa Atoll				</td>
+            <td class="wp10">
+                Hotel				</td>
+            <td class="wp10">
+                4.0				</td>
+            <td class="wp5">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="actions text-right w130">
+                <a class="btn btn-success btn-xs" href="/admin/LocalAccommodationRatings/edit/6860"><i class="material-icons">add_circle</i>&nbsp;Přidat</a>&nbsp;<div class="btn-group"><a role="button" class="btn btn-outline-secondary btn-xs dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a><ul class="dropdown-menu pull-right" role="menu"><li><a target="_blank" href="/Searchmasks/master/6860"><i class="material-icons">link</i>&nbsp;Odkaz na veřejný web</a></li></ul></div>&nbsp;				</td>
+        </tr>
+                    <tr>
+            <td class="wp5">
+                6862				</td>
+            <td class="wp15">
+                <a href="/admin/AccommodationMasters/view/6862">Club Faru</a>
+
+            </td>
+            <td class="wp30">
+                Maledivy » Kaafu Atoll				</td>
+            <td class="wp10">
+                Hotel				</td>
+            <td class="wp10">
+                3.0				</td>
+            <td class="wp5">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="actions text-right w130">
+                <a class="btn btn-success btn-xs" href="/admin/LocalAccommodationRatings/edit/6862"><i class="material-icons">add_circle</i>&nbsp;Přidat</a>&nbsp;<div class="btn-group"><a role="button" class="btn btn-outline-secondary btn-xs dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a><ul class="dropdown-menu pull-right" role="menu"><li><a target="_blank" href="/Searchmasks/master/6862"><i class="material-icons">link</i>&nbsp;Odkaz na veřejný web</a></li></ul></div>&nbsp;				</td>
+        </tr>
+                    <tr>
+            <td class="wp5">
+                6863				</td>
+            <td class="wp15">
+                                        <a href="https://i.ccdn.cz/acm/184/887902/l0.jpg" data-fancybox="AccommodationImage" class="colorbox" rel="colorbox-6863" title="Friday Attitude">
+                        <i class="material-icons">image</i>
+                    </a>
+                <a href="/admin/AccommodationMasters/view/6863">Friday Attitude</a>
+
+            </td>
+            <td class="wp30">
+                Mauricius » Trou d´eau Douce				</td>
+            <td class="wp10">
+                Hotel				</td>
+            <td class="wp10">
+                3.0				</td>
+            <td class="wp5">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="actions text-right w130">
+                <a class="btn btn-success btn-xs" href="/admin/LocalAccommodationRatings/edit/6863"><i class="material-icons">add_circle</i>&nbsp;Přidat</a>&nbsp;<div class="btn-group"><a role="button" class="btn btn-outline-secondary btn-xs dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a><ul class="dropdown-menu pull-right" role="menu"><li><a target="_blank" href="/Searchmasks/master/6863"><i class="material-icons">link</i>&nbsp;Odkaz na veřejný web</a></li></ul></div>&nbsp;				</td>
+        </tr>
+                    <tr>
+            <td class="wp5">
+                6864				</td>
+            <td class="wp15">
+                                        <a href="https://i.ccdn.cz/acm/232/803152/l0.jpg" data-fancybox="AccommodationImage" class="colorbox" rel="colorbox-6864" title="Equator Village">
+                        <i class="material-icons">image</i>
+                    </a>
+                <a href="/admin/AccommodationMasters/view/6864">Equator Village</a>
+
+            </td>
+            <td class="wp30">
+                Maledivy » Addu Atoll				</td>
+            <td class="wp10">
+                Bungalovy				</td>
+            <td class="wp10">
+                3.0				</td>
+            <td class="wp5">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="actions text-right w130">
+                <a class="btn btn-success btn-xs" href="/admin/LocalAccommodationRatings/edit/6864"><i class="material-icons">add_circle</i>&nbsp;Přidat</a>&nbsp;<div class="btn-group"><a role="button" class="btn btn-outline-secondary btn-xs dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a><ul class="dropdown-menu pull-right" role="menu"><li><a target="_blank" href="/Searchmasks/master/6864"><i class="material-icons">link</i>&nbsp;Odkaz na veřejný web</a></li></ul></div>&nbsp;				</td>
+        </tr>
+                    <tr>
+            <td class="wp5">
+                6866				</td>
+            <td class="wp15">
+                                        <a href="https://i.ccdn.cz/acm/184/888121/l0.jpg" data-fancybox="AccommodationImage" class="colorbox" rel="colorbox-6866" title="C Rodrigues Mourouk">
+                        <i class="material-icons">image</i>
+                    </a>
+                <a href="/admin/AccommodationMasters/view/6866">C Rodrigues Mourouk</a><p>ex: Mourouk Ebony Hotel
+
+            </p></td>
+            <td class="wp30">
+                Mauricius » Rodrigues				</td>
+            <td class="wp10">
+                Hotel				</td>
+            <td class="wp10">
+                3.0				</td>
+            <td class="wp5">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="actions text-right w130">
+                <a class="btn btn-success btn-xs" href="/admin/LocalAccommodationRatings/edit/6866"><i class="material-icons">add_circle</i>&nbsp;Přidat</a>&nbsp;<div class="btn-group"><a role="button" class="btn btn-outline-secondary btn-xs dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a><ul class="dropdown-menu pull-right" role="menu"><li><a target="_blank" href="/Searchmasks/master/6866"><i class="material-icons">link</i>&nbsp;Odkaz na veřejný web</a></li></ul></div>&nbsp;				</td>
+        </tr>
+                    <tr>
+            <td class="wp5">
+                6867				</td>
+            <td class="wp15">
+                                        <a href="https://i.ccdn.cz/acm/58/885108/l0.jpg" data-fancybox="AccommodationImage" class="colorbox" rel="colorbox-6867" title="The Westin Mauritius Turtle Bay Resort &amp; Spa">
+                        <i class="material-icons">image</i>
+                    </a>
+                <a href="/admin/AccommodationMasters/view/6867">The Westin Mauritius Turtle Bay Resort &amp; Spa</a>
+
+            </td>
+            <td class="wp30">
+                Mauricius » Balaclava				</td>
+            <td class="wp10">
+                Hotel				</td>
+            <td class="wp10">
+                5.0				</td>
+            <td class="wp5">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="actions text-right w130">
+                <a class="btn btn-success btn-xs" href="/admin/LocalAccommodationRatings/edit/6867"><i class="material-icons">add_circle</i>&nbsp;Přidat</a>&nbsp;<div class="btn-group"><a role="button" class="btn btn-outline-secondary btn-xs dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a><ul class="dropdown-menu pull-right" role="menu"><li><a target="_blank" href="/Searchmasks/master/6867"><i class="material-icons">link</i>&nbsp;Odkaz na veřejný web</a></li></ul></div>&nbsp;				</td>
+        </tr>
+                    <tr>
+            <td class="wp5">
+                6868				</td>
+            <td class="wp15">
+                                        <a href="https://i.ccdn.cz/acm/58/858714/l0.jpg" data-fancybox="AccommodationImage" class="colorbox" rel="colorbox-6868" title="Le Meridien Ile Maurice">
+                        <i class="material-icons">image</i>
+                    </a>
+                <a href="/admin/AccommodationMasters/view/6868">Le Meridien Ile Maurice</a>
+
+            </td>
+            <td class="wp30">
+                Mauricius » Pointe aux Piments				</td>
+            <td class="wp10">
+                Hotel				</td>
+            <td class="wp10">
+                5.0				</td>
+            <td class="wp5">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="actions text-right w130">
+                <a class="btn btn-success btn-xs" href="/admin/LocalAccommodationRatings/edit/6868"><i class="material-icons">add_circle</i>&nbsp;Přidat</a>&nbsp;<div class="btn-group"><a role="button" class="btn btn-outline-secondary btn-xs dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a><ul class="dropdown-menu pull-right" role="menu"><li><a target="_blank" href="/Searchmasks/master/6868"><i class="material-icons">link</i>&nbsp;Odkaz na veřejný web</a></li></ul></div>&nbsp;				</td>
+        </tr>
+                    <tr>
+            <td class="wp5">
+                6870				</td>
+            <td class="wp15">
+                                        <a href="https://i.ccdn.cz/acm/80/398627/l0.jpg" data-fancybox="AccommodationImage" class="colorbox" rel="colorbox-6870" title="Cocotiers">
+                        <i class="material-icons">image</i>
+                    </a>
+                <a href="/admin/AccommodationMasters/view/6870">Cocotiers</a>
+
+            </td>
+            <td class="wp30">
+                Mauricius				</td>
+            <td class="wp10">
+                Hotel				</td>
+            <td class="wp10">
+                2.0				</td>
+            <td class="wp5">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="actions text-right w130">
+                <a class="btn btn-success btn-xs" href="/admin/LocalAccommodationRatings/edit/6870"><i class="material-icons">add_circle</i>&nbsp;Přidat</a>&nbsp;<div class="btn-group"><a role="button" class="btn btn-outline-secondary btn-xs dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a><ul class="dropdown-menu pull-right" role="menu"><li><a target="_blank" href="/Searchmasks/master/6870"><i class="material-icons">link</i>&nbsp;Odkaz na veřejný web</a></li></ul></div>&nbsp;				</td>
+        </tr>
+                    <tr>
+            <td class="wp5">
+                6871				</td>
+            <td class="wp15">
+                                        <a href="https://i.ccdn.cz/acm/11/886243/l0.jpg" data-fancybox="AccommodationImage" class="colorbox" rel="colorbox-6871" title=" Veranda Tamarin ">
+                        <i class="material-icons">image</i>
+                    </a>
+                <a href="/admin/AccommodationMasters/view/6871"> Veranda Tamarin </a><p>ex: Hotel Tamarin
+
+            </p></td>
+            <td class="wp30">
+                Mauricius » Tamarin				</td>
+            <td class="wp10">
+                -				</td>
+            <td class="wp10">
+                3.0				</td>
+            <td class="wp5">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="wp10">
+                Ne				</td>
+            <td class="actions text-right w130">
+                <a class="btn btn-success btn-xs" href="/admin/LocalAccommodationRatings/edit/6871"><i class="material-icons">add_circle</i>&nbsp;Přidat</a>&nbsp;<div class="btn-group"><a role="button" class="btn btn-outline-secondary btn-xs dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a><ul class="dropdown-menu pull-right" role="menu"><li><a target="_blank" href="/Searchmasks/master/6871"><i class="material-icons">link</i>&nbsp;Odkaz na veřejný web</a></li></ul></div>&nbsp;				</td>
+        </tr>
+                </tbody>
+</table>

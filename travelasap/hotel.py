@@ -11,6 +11,9 @@ class Hotel:
         self.description = description
         self.amenities = amenities or []
         self.driver = None
+        self.initialize_driver()
+
+    def initialize_driver(self):
         try:
             # Pokus o použití lokálního WebDriveru
             try:
@@ -19,6 +22,8 @@ class Hotel:
                 print(f"Chyba s lokálním WebDriverem: {local_error}")
                 # Pokud selže, pokusí se stáhnout nejnovější verzi z webu
                 self.driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
+        except Exception as e:
+            print(f"Chyba při inicializaci WebDriveru: {e}")
 
     
     def scrape_terms(self, adults=2, children=0, children_ages=[]):
@@ -62,3 +67,7 @@ class Hotel:
     def load_from_db(self, db_connection):
         # Načtení dat o hotelu z databáze
         pass
+
+    def __del__(self):
+        if self.driver:
+            self.driver.quit()
