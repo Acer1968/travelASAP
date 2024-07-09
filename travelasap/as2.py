@@ -11,6 +11,7 @@ from dotenv import load_dotenv
 import os
 
 TIMEOUT = 10  # Konstanta pro timeouty
+TOTAL_PAGES = 17738  # Počet stránek na scrapování
 
 class AdminScraper:
     def __init__(self):
@@ -155,6 +156,6 @@ class AdminScraper:
 if __name__ == "__main__":
     scraper = AdminScraper()
     scraper.login()
-    all_data = scraper.scrape_all_pages(total_pages=6)  # Limit pro testování
+    all_data = scraper.scrape_all_pages(total_pages=TOTAL_PAGES)  # Limit pro testování
     scraper.save_to_csv(all_data, 'hotels_data.csv')
     scraper.close()
