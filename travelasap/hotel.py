@@ -2,16 +2,32 @@ from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
 from webdriver_manager.chrome import ChromeDriverManager
+from slugify import slugify
 import time
+import sqlite3
+
 
 class Hotel:
-    def __init__(self, hotel_id, name=None, description=None, amenities=None):
+    def __init__(self, hotel_id, db_path='travelasap.db'):
         self.hotel_id = hotel_id
-        self.name = name
-        self.description = description
-        self.amenities = amenities or []
+        self.name = None
+        self.exname = None
+        self.picture = None
+        self.description = None
+        self.amenities = []
+        self.country_and_destination = None
+        self.accommodation_type = None
+        self.hotel_category = None
+        self.recommendation = None
+        self.own_rating = None
+        self.own_texts = None
         self.driver = None
-        self.initialize_driver()
+        self.db_path = db_path
+
+        # Pokus o načtení dat z databáze
+        if not self.load_from_db():
+            print(f"Hotel with ID {self.hotel_id} not found in database.")
+            # Přidat logiku pro stažení dat z webu, pokud není nalezeno v databázi
 
     def initialize_driver(self):
         try:
@@ -59,14 +75,40 @@ class Hotel:
         # Scrapování vybavení hotelu
         amenities_elements = self.driver.find_elements(By.CSS_SELECTOR, "css_selector_for_amenities")
         self.amenities = [element.text for element in amenities_elements]
+
+    def generate_url_fragments(self):
+        hotel_name_slug = slugify(self.name)
+        country_slug = slugify(self.country_and_destination.split(" » ")[0])
+        destination_slug = slugify(self.country_and_destination.split(" » ")[1])
+        
+        url_fragment_1 = f"a/{self.hotel_id}"
+        url_fragment_2 = f"chcete-jet-do/{hotel_name_slug}/{country_slug}/{destination_slug}/{self.hotel_id}a"
+        
+        return url_fragment_1, url_fragment_2
     
     def save_to_db(self, db_connection):
         # Uložení dat o hotelu do databáze
         pass
     
-    def load_from_db(self, db_connection):
-        # Načtení dat o hotelu z databáze
-        pass
+    def load_from_db(self):
+        conn = sqlite3.connect(self.db_path)
+        conn.row_factory = sqlite3.Row
+        cursor = conn.cursor()
+        cursor.execute("SELECT * FROM hotels WHERE Hotel_ID = ?", (self.hotel_id,))
+        row = cursor.fetchone()
+        conn.close()
+
+        if row:
+            self.name = row['Hotel_Name']
+            self.exname = row['Hotel_Exname']  # nebo jiný sloupec podle skutečné struktury
+            self.country_and_destination = row['Country_and_Destination']
+            self.accommodation_type = row['Accommodation_Type']
+            self.hotel_category = row['Hotel_Category']
+            self.recommendation = row['Recommendation']
+            self.own_rating = row['Own_Rating']
+            self.own_texts = row['Own_Texts']
+            return True
+        return False
 
     def __del__(self):
         if self.driver:

@@ -12,6 +12,8 @@ import os
 
 TIMEOUT = 10  # Konstanta pro timeouty
 TOTAL_PAGES = 17738  # Počet stránek na scrapování
+START_PAGE = 1  # Stránka, od které se bude scrapovat
+END_PAGE = TOTAL_PAGES  # Stránka, do které se bude scrapovat
 
 class AdminScraper:
     def __init__(self):
@@ -133,10 +135,10 @@ class AdminScraper:
         print(f"Scraped {len(data)} entries from page {page_number}")
         return data
     
-    def scrape_all_pages(self, total_pages):
+    def scrape_all_pages(self, start_page, end_page):
         all_hotel_data = []
-        for page in range(1, total_pages + 1):
-            print(f"Scraping page {page} of {total_pages}")
+        for page in range(start_page, end_page + 1):
+            print(f"Scraping page {page} of {end_page}")
             hotel_data = self.scrape_page(page)
             all_hotel_data.extend(hotel_data)
             print(f"Total entries so far: {len(all_hotel_data)}")
@@ -156,6 +158,6 @@ class AdminScraper:
 if __name__ == "__main__":
     scraper = AdminScraper()
     scraper.login()
-    all_data = scraper.scrape_all_pages(total_pages=TOTAL_PAGES)  # Limit pro testování
+    all_data = scraper.scrape_all_pages(start_page=START_PAGE, end_page=END_PAGE)  # Limit pro testování #all_data = scraper.scrape_all_pages(start_page1, end_page=TOTAL_PAGES)
     scraper.save_to_csv(all_data, 'hotels_data.csv')
     scraper.close()
