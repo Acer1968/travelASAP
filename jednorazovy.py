@@ -9,7 +9,7 @@ if myhotel.name:
     print(url_fragment_2)  # Např. chcete-jet-do/nazevhotelu/zeme/destinace/354a
 
 
-scraper = ta.FrontScraper("https://www.travelasap.cz")
+scraper = ta.FrontScraper()
 description = scraper.scrap_description(url_fragment_1+"#tab-recenze-hotelu", "#tab-recenze-hotelu > div > div.local-rating")
 print(description)
 scraper.close()

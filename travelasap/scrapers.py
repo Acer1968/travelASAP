@@ -1,3 +1,4 @@
+import logging
 import time
 import pandas as pd
 from selenium import webdriver
@@ -9,23 +10,68 @@ from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
 from dotenv import load_dotenv
 import os
-
-TIMEOUT = 10  # Konstanta pro timeouty
-TOTAL_PAGES = 17738  # Počet stránek na scrapování
-START_PAGE = 350  # Nebo nahraď číslo literálem/číslicí 1  # Stránka, od které se bude scrapovat
-END_PAGE = 370  # Nebo nahraď číslo konstantou TOTAL_PAGES  # Stránka, do které se bude scrapovat
-
-ADMINSCRAP = False
-FRONTSCRAP = True
-REPLACING = False
-FILE_PATH = '20240710_266037_hotels_data.csv'
+from settings import TIMEOUT, TOTAL_PAGES, START_PAGE, END_PAGE, ADMINSCRAP, FRONTSCRAP, REPLACING, FILE_PATH, BASE_URL, DRIVER_PATH, ACCOMMODATION_RATING_URL
 
 
+class AdminLoginHandler:
+    def __init__(self, driver, base_url, username, password):
+        self.driver = driver
+        self.base_url = base_url
+        self.username = username
+        self.password = password
 
-class AdminScraper:
-    def __init__(self):
+    def login(self):
+        print("Navigating to admin login page.")
+        self.driver.get(f"{self.base_url}/admin/")
+        try:
+            username_input = WebDriverWait(self.driver, TIMEOUT).until(
+                EC.presence_of_element_located((By.NAME, 'data[User][username]'))
+            )
+            password_input = WebDriverWait(self.driver, TIMEOUT).until(
+                EC.presence_of_element_located((By.NAME, 'data[User][password]'))
+            )
+            login_button = WebDriverWait(self.driver, TIMEOUT).until(
+                EC.presence_of_element_located((By.XPATH, '//input[@type="submit" and @value="Přihlásit"]'))
+            )
+            username_input.send_keys(self.username)
+            password_input.send_keys(self.password)
+            self.driver.execute_script("arguments[0].click();", login_button)
+            time.sleep(2)
+        except TimeoutException:
+            print("Timeout while waiting for login elements")
+            self.driver.save_screenshot("timeout_error.png")
+
+
+class BaseScraper:
+    def __init__(self, driver_path=DRIVER_PATH):
+        self.driver = None
+        self.initialize_driver(driver_path)
+
+    def initialize_driver(self, driver_path):
+        try:
+            if driver_path:
+                self.driver = webdriver.Chrome(service=Service(driver_path))
+            else:
+                self.driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
+        except Exception as e:
+            logging.error(f"Error initializing WebDriver from path {driver_path}: {e}")
+            self.try_fallback_driver()
+
+    def try_fallback_driver(self):
+        try:
+            self.driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
+        except Exception as e:
+            logging.error(f"Error initializing WebDriver from fallback: {e}")
+            self.driver = None
+
+    def get_driver(self):
+        return self.driver
+
+class AdminScraper(BaseScraper):
+    def __init__(self, driver_path=None):
+        super().__init__(driver_path)
         load_dotenv()
-        self.base_url = 'https://www.travelasap.cz'
+        self.base_url = BASE_URL
         self.admin_username = os.getenv('CESYS_LOGIN')
         self.admin_password = os.getenv('CESYS_PASSWORD')
         print(f"Loaded credentials: {self.admin_username}, {self.admin_password}")
@@ -35,7 +81,7 @@ class AdminScraper:
     def initialize_driver(self):
         try:
             print("Trying to initialize WebDriver.")
-            self.driver = webdriver.Chrome(service=Service(r"d:\\PetrVavrinec\\PythonProjects\\webdrivers\\chromedriver.exe"))
+            self.driver = webdriver.Chrome(service=Service(DRIVER_PATH))
         except Exception as local_error:
             print(f"Chyba s lokálním WebDriverem: {local_error}")
             print("Trying to initialize WebDriver from WebDriverManager.")
@@ -71,28 +117,27 @@ class AdminScraper:
             print("Timeout while waiting for login elements")
             self.driver.save_screenshot("timeout_error.png")
 
-    def scrape_page(self, page_number):
-        url = f"{self.base_url}/admin/LocalAccommodationRatings/index/page:{page_number}"
+    def scrape_hotel_data_from_page(self, page_number):
+        url = f"{self.base_url}{ACCOMMODATION_RATING_URL}{page_number}"
         print(f"Navigating to page {page_number}")
-        self.driver.get(url)
-
         try:
+            self.driver.get(url)
             WebDriverWait(self.driver, TIMEOUT).until(
                 EC.presence_of_element_located((By.TAG_NAME, 'table'))
             )
+            rows = self.driver.find_elements(By.XPATH, "//table/tbody/tr")
+            logging.info(f"Found {len(rows)} rows on page {page_number}")
         except TimeoutException:
-            print(f"Timeout on page {page_number}")
+            logging.error(f"Timeout on page {page_number}")
             return []
-
-        rows = self.driver.find_elements(By.XPATH, "//table/tbody/tr")
-        print(f"Found {len(rows)} rows on page {page_number}")
 
         data = []
         for row in rows:
             cells = row.find_elements(By.TAG_NAME, 'td')
             if len(cells) < 8:
-                print(f"Row skipped due to insufficient number of cells: {row.text}")
+                logging.warning(f"Row skipped due to insufficient number of cells: {row.text}")
                 continue
+
             
             hotel_id = cells[0].text.strip()
             
@@ -139,14 +184,15 @@ class AdminScraper:
                 'Own Texts': own_texts,
             })
 
-        print(f"Scraped {len(data)} entries from page {page_number}")
+        # print(f"Scraped {len(data)} entries from page {page_number}")
+        logging.info(f"Scraped {len(data)} entries from page {page_number}")
         return data
     
     def scrape_all_pages(self, start_page, end_page):
         all_hotel_data = []
         for page in range(start_page, end_page + 1):
             print(f"Scraping page {page} of {end_page}")
-            hotel_data = self.scrape_page(page)
+            hotel_data = self.scrape_hotel_data_from_page(page)
             all_hotel_data.extend(hotel_data)
             print(f"Total entries so far: {len(all_hotel_data)}")
         return all_hotel_data
@@ -196,8 +242,9 @@ class AdminScraper:
         ])
         df.to_csv(filename, index=False)
 
-class FrontScraper:
-    def __init__(self, base_url):
+class FrontScraper(BaseScraper):
+    def __init__(self, driver_path=DRIVER_PATH, base_url=BASE_URL):
+        super().__init__(driver_path)
         self.base_url = base_url
         self.driver = self.initialize_driver()
 
