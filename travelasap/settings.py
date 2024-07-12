@@ -1,3 +1,5 @@
+import dotenv
+
 TIMEOUT = 10  # Konstanta pro timeouty
 TOTAL_PAGES = 17738  # Počet stránek na scrapování
 START_PAGE = 350  # Nebo nahraď číslo literálem/číslicí 1  # Stránka, od které se bude scrapovat

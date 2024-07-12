@@ -10,7 +10,7 @@ from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
 from dotenv import load_dotenv
 import os
-from settings import TIMEOUT, TOTAL_PAGES, START_PAGE, END_PAGE, ADMINSCRAP, FRONTSCRAP, REPLACING, FILE_PATH, BASE_URL, DRIVER_PATH, ACCOMMODATION_RATING_URL
+from travelasap.settings import TIMEOUT, TOTAL_PAGES, START_PAGE, END_PAGE, ADMINSCRAP, FRONTSCRAP, REPLACING, FILE_PATH, BASE_URL, DRIVER_PATH, ACCOMMODATION_RATING_URL
 
 
 class AdminLoginHandler:
