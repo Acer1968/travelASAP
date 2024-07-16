@@ -1,29 +1,61 @@
-import logging
-import time
-import pandas as pd
 from selenium import webdriver
+from selenium.webdriver.chrome.service import Service
+from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from selenium.common.exceptions import TimeoutException
-from selenium.webdriver.chrome.service import Service
-from webdriver_manager.chrome import ChromeDriverManager
+from selenium.common.exceptions import TimeoutException, WebDriverException
+import pandas as pd
 from dotenv import load_dotenv
 import os
-from travelasap.settings import TIMEOUT, TOTAL_PAGES, START_PAGE, END_PAGE, ADMINSCRAP, FRONTSCRAP, REPLACING, FILE_PATH, BASE_URL, DRIVER_PATH, ACCOMMODATION_RATING_URL
+import time
+import logging
+from travelasap.settings import TIMEOUT, BASE_URL, DRIVER_PATH, ACCOMMODATION_RATING_URL, TEST_URL
 
+load_dotenv()  # načtení hodnot z .env souboru
 
 class AdminLoginHandler:
-    def __init__(self, driver, base_url, username, password):
-        self.driver = driver
-        self.base_url = base_url
-        self.username = username
-        self.password = password
+    def __init__(self, driver_path=DRIVER_PATH, base_url=BASE_URL):
+        self.driver_path = driver_path
+        self.base_url = base_url.rstrip('/')  # Odstranění koncového lomítka
+        self.username = os.getenv("CESYS_LOGIN")
+        self.password = os.getenv("CESYS_PASSWORD")
+        if not self.username or not self.password:
+            logging.error("Username or password not found in .env file or ENVIROMENT VARIABLES.")
+            raise ValueError("Username or password not found in .env file or ENVIROMENT VARIABLES.")
+        self.driver = self.initialize_driver()
+
+    def initialize_driver(self):
+        driver = None
+        try:
+            # Pokus o použití lokální verze webdriveru
+            if self.driver_path:
+                driver = webdriver.Chrome(service=Service(self.driver_path))
+                # Testujeme, zda je lokální verze kompatibilní
+                driver.get(TEST_URL)
+        except WebDriverException as e:
+            logging.error(f"Local WebDriver not compatible or not found: {e}")
+            # Pokus o stažení a použití nejnovější verze webdriveru
+            driver = self.try_fallback_driver()
+        logging.info(f"WebDriver is found and loaded: {driver}")
+        return driver
+
+    def try_fallback_driver(self):
+        try:
+            return webdriver.Chrome(service=Service(ChromeDriverManager().install()))
+        except Exception as e:
+            logging.error(f"Error initializing WebDriver from ChromeDriverManager: {e}")
+            return None
 
     def login(self):
+        if not self.driver:
+            logging.error("WebDriver is not initialized.")
+            return False
+        
         print("Navigating to admin login page.")
         self.driver.get(f"{self.base_url}/admin/")
         try:
+            print("Waiting for username input.")
             username_input = WebDriverWait(self.driver, TIMEOUT).until(
                 EC.presence_of_element_located((By.NAME, 'data[User][username]'))
             )
@@ -37,87 +69,27 @@ class AdminLoginHandler:
             password_input.send_keys(self.password)
             self.driver.execute_script("arguments[0].click();", login_button)
             time.sleep(2)
+            return True
         except TimeoutException:
             print("Timeout while waiting for login elements")
             self.driver.save_screenshot("timeout_error.png")
+            return False
+
+    def close(self):
+        if self.driver:
+            self.driver.quit()
 
 
 class BaseScraper:
-    def __init__(self, driver_path=DRIVER_PATH):
-        self.driver = None
-        self.initialize_driver(driver_path)
-
-    def initialize_driver(self, driver_path):
-        try:
-            if driver_path:
-                self.driver = webdriver.Chrome(service=Service(driver_path))
-            else:
-                self.driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
-        except Exception as e:
-            logging.error(f"Error initializing WebDriver from path {driver_path}: {e}")
-            self.try_fallback_driver()
-
-    def try_fallback_driver(self):
-        try:
-            self.driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
-        except Exception as e:
-            logging.error(f"Error initializing WebDriver from fallback: {e}")
-            self.driver = None
-
-    def get_driver(self):
-        return self.driver
+    def __init__(self, driver):
+        self.driver = driver
 
 class AdminScraper(BaseScraper):
-    def __init__(self, driver_path=None):
-        super().__init__(driver_path)
-        load_dotenv()
-        self.base_url = BASE_URL
-        self.admin_username = os.getenv('CESYS_LOGIN')
-        self.admin_password = os.getenv('CESYS_PASSWORD')
-        print(f"Loaded credentials: {self.admin_username}, {self.admin_password}")
-        self.driver = None
-        self.initialize_driver()
+    def __init__(self, driver):
+        super().__init__(driver)
     
-    def initialize_driver(self):
-        try:
-            print("Trying to initialize WebDriver.")
-            self.driver = webdriver.Chrome(service=Service(DRIVER_PATH))
-        except Exception as local_error:
-            print(f"Chyba s lokálním WebDriverem: {local_error}")
-            print("Trying to initialize WebDriver from WebDriverManager.")
-            self.driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
-        
-    def login(self):
-        print("Navigating to admin login page.")
-        self.driver.get(f"{self.base_url}/admin/")
-        try:
-            print("Waiting for username input.")
-            username_input = WebDriverWait(self.driver, TIMEOUT).until(
-                EC.presence_of_element_located((By.NAME, 'data[User][username]'))
-            )
-            print("Waiting for password input.")
-            password_input = WebDriverWait(self.driver, TIMEOUT).until(
-                EC.presence_of_element_located((By.NAME, 'data[User][password]'))
-            )
-            print("Waiting for login button.")
-            login_button = WebDriverWait(self.driver, TIMEOUT).until(
-                EC.presence_of_element_located((By.XPATH, '//input[@type="submit" and @value="Přihlásit"]'))
-            )
 
-            print("Sending login credentials.")
-            username_input.send_keys(self.admin_username)
-            password_input.send_keys(self.admin_password)
-            
-            print("Clicking the login button.")
-            self.driver.execute_script("arguments[0].click();", login_button)
-            print("Saving screenshot after login.")
-            time.sleep(2)
-            self.driver.save_screenshot("login_page_after_click.png")
-        except TimeoutException:
-            print("Timeout while waiting for login elements")
-            self.driver.save_screenshot("timeout_error.png")
-
-    def scrape_hotel_data_from_page(self, page_number):
+    def scrape_hotel_data_from_ratting_page(self, page_number):
         url = f"{self.base_url}{ACCOMMODATION_RATING_URL}{page_number}"
         print(f"Navigating to page {page_number}")
         try:
@@ -192,7 +164,7 @@ class AdminScraper(BaseScraper):
         all_hotel_data = []
         for page in range(start_page, end_page + 1):
             print(f"Scraping page {page} of {end_page}")
-            hotel_data = self.scrape_hotel_data_from_page(page)
+            hotel_data = self.scrape_hotel_data_from_ratting_page(page)
             all_hotel_data.extend(hotel_data)
             print(f"Total entries so far: {len(all_hotel_data)}")
         return all_hotel_data
@@ -243,22 +215,13 @@ class AdminScraper(BaseScraper):
         df.to_csv(filename, index=False)
 
 class FrontScraper(BaseScraper):
-    def __init__(self, driver_path=DRIVER_PATH, base_url=BASE_URL):
-        super().__init__(driver_path)
-        self.base_url = base_url
-        self.driver = self.initialize_driver()
+    def __init__(self, driver, base_url=BASE_URL):
+        super().__init__(driver)
+        self.base_url = base_url.rstrip('/')  # Odstranění koncového lomítka
 
-    def initialize_driver(self):
+    def scrap_html_selector(self, url_fragment, html_selector):
         try:
-            driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
-        except Exception as e:
-            print(f"Error initializing WebDriver: {e}")
-            driver = None
-        return driver
-
-    def scrap_description(self, url_fragment, html_selector):
-        try:
-            url = f"{self.base_url}/{url_fragment}"
+            url = f"{self.base_url}/{url_fragment.lstrip('/')}"  # Odstranění počátečního lomítka u fragmentu, pokud tam nějaké je
             print(f"Scraping description from {url}")
             self.driver.get(url)
             WebDriverWait(self.driver, 10).until(

@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>BLOG v adresáři subs/blog</title>
+</head>
+
+<body>
+    <h1>TESTOVACÍ ROZCESTNÍK</h1>
+    <p>Tohle je zkušební stránka <strong>BLOGU</strong> a pokud se tohle objevuje,
+        <strong>JE TO ADRESÁŘ MIMO MULTISITE</strong> vytvořený na FTP pomocí subdomény, takže se zobrazuje soubor index.html z
+        podadresáře subs/blog/.
+    </p>
+    <div><a href="https://blog.travelasap.cz">Toto je odkaz na https://blog.travelasap.cz</a>
+        <p>Klikem se dostanu zpátky na tu samou stránku.<br/>
+            ping https://blog.travelasap.cz<br/>
+            Ping request could not find host https://blog.travelasap.cz. Please check the name and try again.
+        </p>
+    </div>
+    <hr/>
+    <div><a href="https://www.travelasap.cz/blog">Toto je odkaz na https://www.travelasap.cz/blog</a>
+        <p>Klikem se dostanu na nějakou dynamicky generovanou stránku blogu přímo v systému CeSYS.<br/>
+            ping https://blog.travelasap.cz<br/>
+            Ping request could not find host https://blog.travelasap.cz. Please check the name and try again.
+        </p>
+    </div>
+    <hr/>
+    <div><a href="https://blog.playasap.eu">Toto je odkaz na https://blog.playasap.eu</a>
+        <p>Klikem se dostanu na hlavní stránku webu <a href="playasap.eu">playasap.eu</a><br/>
+        </p>
+    </div>
+    <hr/>
+    <div><a href="https://www.playasap.eu/blog">Toto je odkaz na https://www.playasap.eu/blog</a>
+        <p>Klikem se dostanu na CHYBOVOU stránku Wordpressu pro situ z MULTISITE pro <a href="playasap.eu">playasap.eu</a> (?? Jejda! Tuto stránku nelze nalézt. ??) na <a href="playasap.eu">playasap.eu</a>.<br/>
+        </p>
+    </div>
+    <hr/>
+    <div><a href="https://blog.salongaladriel.cz">Toto je odkaz na https://blog.salongaladriel.cz</a>
+        <p>Klikem se dostanu na stránku APANELu, která se objevuje, pokud stránka neexistuje, myslím.<br/>
+            
+        </p>
+    </div>
+    <hr/>
+    <div><a href="https://www.salongaladriel.cz/blog">Toto je odkaz na https://www.salongaladriel.cz/blog</a>
+        <p>Klikem se dostanu na CHYBOVOU stránku Wordpressu pro situ z MULTISITE pro <a href="salongaladriel.cz">salongaladriel.cz</a> (?? Jejda! Tuto stránku nelze nalézt. ??) na <a href="salongaladriel.cz">salongaladriel.cz</a>.<br/>
+        </p>
+    </div>
+    <hr/>
+    <p>Popravdě, vůbec netuším, proč jednotlivé odkazy fungují tak, jak fungují :-O</p>
+</body>
+
+</html>
